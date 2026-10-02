@@ -84,10 +84,10 @@ extension ResetView {
 	@ViewBuilder
 	private func _coredata() -> some View {
 		Section {
-			Button("Reset Sources", systemImage: "xmark.circle") {
-				Self.resetAlert(
-					title: "Reset Signed Apps",
-					message: Storage.shared.countContent(for: AltSource.self)
+				Button("Reset Sources", systemImage: "xmark.circle") {
+					Self.resetAlert(
+						title: "Reset Sources",
+						message: Storage.shared.countContent(for: AltSource.self)
 				) {
 					Self.resetSources()
 				}
