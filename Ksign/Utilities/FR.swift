@@ -160,14 +160,32 @@ enum FR {
 		from urlString: String,
 		completion: @escaping (Bool) -> Void
 	) {
+		guard let url = URL(string: urlString),
+			  url.scheme?.lowercased() == "https",
+			  url.host?.lowercased() == "backloop.dev",
+			  url.path == "/pack.json",
+			  url.user == nil,
+			  url.password == nil,
+			  url.port == nil || url.port == 443 else {
+			completion(false)
+			return
+		}
 		let generator = UINotificationFeedbackGenerator()
 		generator.prepare()
 		
 		NBFetchService().fetch(from: urlString) { (result: Result<ServerPackModel, Error>) in
-			switch result {
-			case .success(let pack):
-				do {
-					let serverDir = URL.documentsDirectory.appendingPathComponent("App").appendingPathComponent("Server")
+				switch result {
+				case .success(let pack):
+					do {
+						guard pack.key.contains("-----BEGIN"),
+							  pack.key.contains("PRIVATE KEY-----"),
+							  pack.cert.contains("-----BEGIN CERTIFICATE-----"),
+							  pack.cert.contains("-----END CERTIFICATE-----"),
+							  !pack.info.domains.commonName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
+							completion(false)
+							return
+						}
+						let serverDir = URL.documentsDirectory.appendingPathComponent("App").appendingPathComponent("Server")
 					let pemURL = serverDir.appendingPathComponent("server.pem")
 					let crtURL = serverDir.appendingPathComponent("server.crt")
 					let commonNameURL = serverDir.appendingPathComponent("commonName.txt")

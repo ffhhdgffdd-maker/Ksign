@@ -94,10 +94,6 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         _copyServerCertificates()
         _addDefaultCertificates()
 
-#if SERVER
-        // fallback just in case xd
-        _downloadSSLCertificates()
-#endif
         return true
     }
     
@@ -230,17 +226,4 @@ class AppDelegate: NSObject, UIApplicationDelegate {
             }
         }
 
-#if SERVER
-    private func _downloadSSLCertificates() {
-        let serverURL = "https://backloop.dev/pack.json"
-        
-        FR.downloadSSLCertificates(from: serverURL) { success in
-            if success {
-                print("SSL certificates downloaded successfully")
-            } else {
-                print("Failed to download SSL certificates")
-            }
-        }
-    }
-#endif
 }

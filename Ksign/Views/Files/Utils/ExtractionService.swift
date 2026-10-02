@@ -133,6 +133,10 @@ class ExtractionService {
         to destinationURL: URL,
         progressCallback: ((Double) -> Void)?
     ) throws {
+        let archive = try Archive(url: fileURL, accessMode: .read)
+        for entry in archive {
+            _ = try safeDestination(for: entry.path, under: destinationURL)
+        }
         Zip.addCustomFileExtension("ipa")
         if let progressCallback = progressCallback {
             try Zip.unzipFile(fileURL, destination: destinationURL, overwrite: true, password: nil, progress: progressCallback)
@@ -159,7 +163,7 @@ class ExtractionService {
             let progress = Double(index) / Double(totalEntries)
             progressCallback?(progress)
             
-            let destinationPath = destinationURL.appendingPathComponent(entry.path)
+            let destinationPath = try safeDestination(for: entry.path, under: destinationURL)
             switch entry.type {
             case .directory:
                 try FileManager.default.createDirectory(at: destinationPath, withIntermediateDirectories: true)
@@ -220,7 +224,7 @@ class ExtractionService {
     private static func extractTarEntries(_ entries: [TarEntry], to destinationURL: URL) throws {
         for entry in entries {
             let entryPath = entry.info.name
-            let fullPath = destinationURL.appendingPathComponent(entryPath)
+            let fullPath = try safeDestination(for: entryPath, under: destinationURL)
             
             if entry.info.type == .directory {
                 try FileManager.default.createDirectory(at: fullPath, withIntermediateDirectories: true)
@@ -232,6 +236,22 @@ class ExtractionService {
             }
             // Note: Symbolic links and other special types are ignored for simplicity
         }
+    }
+
+    private static func safeDestination(for relativePath: String, under root: URL) throws -> URL {
+        let normalized = relativePath.replacingOccurrences(of: "\\", with: "/")
+        let components = normalized.split(separator: "/", omittingEmptySubsequences: true)
+        guard !normalized.hasPrefix("/"),
+              !components.contains(where: { $0 == ".." || $0 == "." }) else {
+            throw ExtractionError.extractionFailed("Unsafe archive path: \(relativePath)")
+        }
+
+        let rootURL = root.standardizedFileURL
+        let destination = root.appendingPathComponent(normalized).standardizedFileURL
+        guard destination.path == rootURL.path || destination.path.hasPrefix(rootURL.path + "/") else {
+            throw ExtractionError.extractionFailed("Archive path escapes destination")
+        }
+        return destination
     }
 }
 
@@ -252,4 +272,4 @@ enum ExtractionError: LocalizedError {
             return "Extraction failed: \(message)"
         }
     }
-} 
+}

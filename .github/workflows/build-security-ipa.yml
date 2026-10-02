@@ -1,0 +1,28 @@
+name: Build Ceresify Security IPA
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: macos-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - name: Build unsigned IPA
+        run: make
+      - name: Validate IPA
+        run: |
+          test -s packages/Ksign.ipa
+          unzip -tq packages/Ksign.ipa
+          shasum -a 256 packages/Ksign.ipa > packages/Ksign.ipa.sha256
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Ceresify-security-IPA
+          path: |
+            packages/Ksign.ipa
+            packages/Ksign.ipa.sha256
+          if-no-files-found: error
+          retention-days: 14
