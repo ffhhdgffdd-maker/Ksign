@@ -18,7 +18,7 @@ final class SourcesViewModel: ObservableObject {
 	
 	private let _dataService = NBFetchService()
 	
-	var isFinished = true
+	@Published var isFinished = true
 	@Published var sources: [AltSource: ASRepository] = [:]
 	
 	func fetchSources(_ sources: FetchedResults<AltSource>, refresh: Bool = false, batchSize: Int = 4) async {

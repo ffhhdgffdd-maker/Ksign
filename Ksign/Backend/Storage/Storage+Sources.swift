@@ -110,11 +110,18 @@ extension Storage {
         ]
         for (file, name, identifier) in sources {
             guard let url = URL(string: "https://raw.githubusercontent.com/ffhhdgffdd-maker/Ksign/ceresify-security-build/sources/" + file + ".json") else { continue }
-            addSource(url, name: name, identifier: identifier, deferSave: true, isBuiltIn: true) { _ in }
+            if let existing = getSources().first(where: { $0.identifier == identifier || $0.sourceURL == url }) {
+                existing.name = name
+                existing.identifier = identifier
+                existing.sourceURL = url
+                existing.setValue(true, forKey: "isBuiltIn")
+            } else {
+                addSource(url, name: name, identifier: identifier, deferSave: true, isBuiltIn: true) { _ in }
+            }
         }
         do {
             try context.save()
-            UserDefaults.standard.set(2, forKey: "wolfox.sourcesRevision")
+            UserDefaults.standard.set(3, forKey: "wolfox.sourcesRevision")
         } catch {
             print("Could not save WolFox sources: " + error.localizedDescription)
         }
