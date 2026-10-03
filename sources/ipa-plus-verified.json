@@ -988,14 +988,6 @@
     "verified": true
   },
   {
-    "name": "Lark",
-    "bundle": "com.larksuite.lark",
-    "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785327364_b01e58.png",
-    "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=lark",
-    "verified": false,
-    "error": "curl: (28) Operation timed out after 120000 milliseconds with 249692160 out of 330345350 bytes received\n"
-  },
-  {
     "name": "COSEC APTA",
     "bundle": "com.matrixcomsec.ess",
     "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1788474945_e8ecd3.png",
@@ -1137,5 +1129,13 @@
     "sizeBytes": 29578963,
     "date": "2026-10-03T04:41:15.586965+00:00",
     "verified": true
+  },
+  {
+    "name": "Lark",
+    "bundle": "com.larksuite.lark",
+    "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785327364_b01e58.png",
+    "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=lark",
+    "verified": false,
+    "error": "curl: (28) Operation timed out after 120001 milliseconds with 248643584 out of 330345350 bytes received\n"
   }
 ]
