@@ -25,6 +25,7 @@ struct CeresifyRemoteCertificate: Decodable {
             ?? c.decodeIfPresent(String.self, forKey: .mobileprovision)
         password = try c.decodeIfPresent(String.self, forKey: .p12Password)
             ?? c.decodeIfPresent(String.self, forKey: .password)
+            ?? "1"
         name = try c.decodeIfPresent(String.self, forKey: .devName)
             ?? c.decodeIfPresent(String.self, forKey: .name)
         expiresAt = try c.decodeIfPresent(Int.self, forKey: .expireTime)
@@ -32,8 +33,8 @@ struct CeresifyRemoteCertificate: Decodable {
     }
 
     var hasValidPayload: Bool {
-        guard let p12, let provisioningProfile, let password,
-              !p12.isEmpty, !provisioningProfile.isEmpty, !password.isEmpty,
+        guard let p12, let provisioningProfile, password != nil,
+              !p12.isEmpty, !provisioningProfile.isEmpty,
               let p12Data = Data(base64Encoded: p12, options: .ignoreUnknownCharacters),
               let provisionData = Data(base64Encoded: provisioningProfile, options: .ignoreUnknownCharacters),
               !p12Data.isEmpty, !provisionData.isEmpty else { return false }

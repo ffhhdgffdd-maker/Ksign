@@ -1,5 +1,7 @@
 name: Build Ceresify Security IPA
 on:
+  push:
+    branches: [ceresify-security-build]
   workflow_dispatch:
 permissions:
   contents: read
@@ -17,6 +19,9 @@ jobs:
         run: |
           test -s packages/Ksign.ipa
           unzip -tq packages/Ksign.ipa
+          unzip -q packages/Ksign.ipa -d ipa-check
+          test "$(/usr/libexec/PlistBuddy -c 'Print :CFBundleIdentifier' ipa-check/Payload/Ksign.app/Info.plist)" = com.wolfox.ksign
+          test "$(/usr/libexec/PlistBuddy -c 'Print :CFBundleDisplayName' ipa-check/Payload/Ksign.app/Info.plist)" = WolFox
           shasum -a 256 packages/Ksign.ipa > packages/Ksign.ipa.sha256
       - uses: actions/upload-artifact@v4
         with:

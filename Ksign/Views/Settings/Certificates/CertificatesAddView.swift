@@ -15,7 +15,7 @@ struct CertificatesAddView: View {
 	
 	@State private var _p12URL: URL? = nil
 	@State private var _provisionURL: URL? = nil
-	@State private var _p12Password: String = ""
+	@State private var _p12Password: String = "1"
 	@State private var _certificateName: String = ""
 	
 	@State private var _p12Data: Data? = nil
@@ -144,8 +144,15 @@ extension CertificatesAddView {
             provisionURL: provisionURL,
             p12Password: _p12Password,
             certificateName: _certificateName
-        ) { _ in
-            dismiss()
+        ) { error in
+            DispatchQueue.main.async {
+                if let error {
+                    _errorMessage = error.localizedDescription
+                    _isErrorPresenting = true
+                } else {
+                    dismiss()
+                }
+            }
         }
 	}
 }

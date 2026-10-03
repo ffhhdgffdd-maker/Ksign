@@ -135,6 +135,9 @@ class ExtractionService {
     ) throws {
         let archive = try Archive(url: fileURL, accessMode: .read)
         for entry in archive {
+            guard entry.type != .symlink else {
+                throw ExtractionError.extractionFailed("Symbolic links are not supported in archives")
+            }
             _ = try safeDestination(for: entry.path, under: destinationURL)
         }
         Zip.addCustomFileExtension("ipa")
@@ -160,6 +163,9 @@ class ExtractionService {
         let totalEntries = max(entries.count, 1)
         
         for (index, entry) in entries.enumerated() {
+            guard entry.type != .symlink else {
+                throw ExtractionError.extractionFailed("Symbolic links are not supported in archives")
+            }
             let progress = Double(index) / Double(totalEntries)
             progressCallback?(progress)
             
@@ -242,12 +248,12 @@ class ExtractionService {
         let normalized = relativePath.replacingOccurrences(of: "\\", with: "/")
         let components = normalized.split(separator: "/", omittingEmptySubsequences: true)
         guard !normalized.hasPrefix("/"),
-              !components.contains(where: { $0 == ".." || $0 == "." }) else {
+              !components.contains(where: { $0 == ".." }) else {
             throw ExtractionError.extractionFailed("Unsafe archive path: \(relativePath)")
         }
 
-        let rootURL = root.standardizedFileURL
-        let destination = root.appendingPathComponent(normalized).standardizedFileURL
+        let rootURL = root.standardizedFileURL.resolvingSymlinksInPath()
+        let destination = root.appendingPathComponent(normalized).standardizedFileURL.resolvingSymlinksInPath()
         guard destination.path == rootURL.path || destination.path.hasPrefix(rootURL.path + "/") else {
             throw ExtractionError.extractionFailed("Archive path escapes destination")
         }
