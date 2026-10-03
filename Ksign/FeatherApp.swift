@@ -18,11 +18,23 @@ struct FeatherApp: App {
 	@StateObject var accentColorManager = AccentColorManager.shared
     @StateObject var extractManager = ExtractManager.shared
 	@StateObject var logsManager = LogsManager.shared
-	let storage = Storage.shared
+	@StateObject var storage = Storage.shared
 
 	var body: some Scene {
 		WindowGroup {
-			VStack {
+            if let error = storage.startupError {
+                NavigationStack {
+                    Form {
+                        Section {
+                            Label("تعذر فتح بيانات WolFox", systemImage: "exclamationmark.triangle")
+                                .font(.headline)
+                            Text("تم الاحتفاظ بملفاتك. أغلق التطبيق وحاول مجددًا، وأرسل رسالة الخطأ إذا استمرت المشكلة.")
+                            Text(error).font(.caption).textSelection(.enabled)
+                        }
+                    }.navigationTitle("WolFox")
+                }
+            } else {
+            VStack {
                 ExtractHeaderView(extractManager: extractManager)
                     .transition(.move(edge: .top).combined(with: .opacity))
 				DownloadHeaderView(downloadManager: downloadManager)
@@ -41,6 +53,8 @@ struct FeatherApp: App {
 				accentColorManager.updateGlobalTintColor()
 				if logsManager.isCapturing { logsManager.startCapture() }
 			}
+            }
+
 		}
 	}
 	
@@ -82,6 +96,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
     ) -> Bool {
         
+        guard Storage.shared.startupError == nil else { return true }
         _createPipeline()
         _createSourcesDirectory()
         if !UserDefaults.standard.bool(forKey: "hasInitializedBuiltInSources") || UserDefaults.standard.integer(forKey: "wolfox.sourcesRevision") < 3 {

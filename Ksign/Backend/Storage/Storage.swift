@@ -11,6 +11,7 @@ import CoreData
 final class Storage: ObservableObject {
 	static let shared = Storage()
 	let container: NSPersistentContainer
+    @Published private(set) var startupError: String?
 	
 	private let _name: String = "Feather"
 	
@@ -21,9 +22,14 @@ final class Storage: ObservableObject {
 			container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
 		}
 		
-		container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+		for description in container.persistentStoreDescriptions {
+            description.shouldAddStoreAsynchronously = false
+            description.shouldMigrateStoreAutomatically = true
+            description.shouldInferMappingModelAutomatically = true
+        }
+        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
 			if let error = error as NSError? {
-				fatalError("Unresolved error \(error), \(error.userInfo)")
+				self.startupError = error.localizedDescription
 			}
 		})
 		

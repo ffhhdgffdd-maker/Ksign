@@ -35,14 +35,14 @@ class AccentColorManager: ObservableObject {
     ]
     
     var currentAccentColor: Color {
-        guard _selectedAccentColor < _accentColors.count else {
+        guard _accentColors.indices.contains(_selectedAccentColor) else {
             return _accentColors[0].color
         }
         return _accentColors[_selectedAccentColor].color
     }
     
     var currentUIColor: UIColor {
-        guard _selectedAccentColor < _accentColors.count else {
+        guard _accentColors.indices.contains(_selectedAccentColor) else {
             return _accentColors[0].uiColor
         }
         return _accentColors[_selectedAccentColor].uiColor
