@@ -1,7 +1,7 @@
 {
   "name": "WolFox — IPA Plus",
   "identifier": "com.wolfox.source.ipaplus",
-  "website": "https://ipa-plus.com/public/app-gps-plus/",
+  "website": "https://repo.p3nd.fun",
   "tintColor": "1677FF",
   "apps": [
     {
@@ -238,7 +238,7 @@
           "date": "2026-10-03T04:20:37.568836+00:00",
           "downloadURL": "https://ipa-plus.com/public/app-gps-plus/download.php?id=b44d0a73a5",
           "size": 74448597,
-          "minOSVersion": 10.0
+          "minOSVersion": 10
         }
       ]
     },
@@ -255,7 +255,7 @@
           "date": "2026-10-03T04:21:08.257629+00:00",
           "downloadURL": "https://ipa-plus.com/public/app-gps-plus/download.php?id=zenhr",
           "size": 63535049,
-          "minOSVersion": 10.0
+          "minOSVersion": 10
         }
       ]
     },
@@ -340,7 +340,7 @@
           "date": "2026-10-03T04:23:25.586922+00:00",
           "downloadURL": "https://ipa-plus.com/public/app-gps-plus/download.php?id=mename-plus",
           "size": 41365769,
-          "minOSVersion": 10.0
+          "minOSVersion": 10
         }
       ]
     },
@@ -459,7 +459,7 @@
           "date": "2026-10-03T04:25:28.361346+00:00",
           "downloadURL": "https://ipa-plus.com/public/app-gps-plus/download.php?id=mawarid",
           "size": 36203224,
-          "minOSVersion": 10.0
+          "minOSVersion": 10
         }
       ]
     },
@@ -510,7 +510,7 @@
           "date": "2026-10-03T04:26:19.782804+00:00",
           "downloadURL": "https://ipa-plus.com/public/app-gps-plus/download.php?id=mawared",
           "size": 32039308,
-          "minOSVersion": 10.0
+          "minOSVersion": 10
         }
       ]
     },
@@ -527,7 +527,7 @@
           "date": "2026-10-03T04:26:50.298412+00:00",
           "downloadURL": "https://ipa-plus.com/public/app-gps-plus/download.php?id=marfa",
           "size": 63199401,
-          "minOSVersion": 10.0
+          "minOSVersion": 10
         }
       ]
     },
@@ -578,7 +578,7 @@
           "date": "2026-10-03T04:27:35.572649+00:00",
           "downloadURL": "https://ipa-plus.com/public/app-gps-plus/download.php?id=tanaqol-ecare",
           "size": 38893702,
-          "minOSVersion": 10.0
+          "minOSVersion": 10
         }
       ]
     },
@@ -612,7 +612,7 @@
           "date": "2026-10-03T04:28:03.202820+00:00",
           "downloadURL": "https://ipa-plus.com/public/app-gps-plus/download.php?id=amer",
           "size": 28322529,
-          "minOSVersion": 10.0
+          "minOSVersion": 10
         }
       ]
     },
@@ -629,7 +629,7 @@
           "date": "2026-10-03T04:28:21.430027+00:00",
           "downloadURL": "https://ipa-plus.com/public/app-gps-plus/download.php?id=04a8ed5103",
           "size": 37669130,
-          "minOSVersion": 10.0
+          "minOSVersion": 10
         }
       ]
     },
@@ -646,7 +646,7 @@
           "date": "2026-10-03T04:28:32.602375+00:00",
           "downloadURL": "https://ipa-plus.com/public/app-gps-plus/download.php?id=dawmt",
           "size": 22909366,
-          "minOSVersion": 10.0
+          "minOSVersion": 10
         }
       ]
     },
@@ -714,7 +714,7 @@
           "date": "2026-10-03T04:29:28.649982+00:00",
           "downloadURL": "https://ipa-plus.com/public/app-gps-plus/download.php?id=623559996a",
           "size": 33412470,
-          "minOSVersion": 10.0
+          "minOSVersion": 10
         }
       ]
     },
@@ -816,7 +816,7 @@
           "date": "2026-10-03T04:30:34.649862+00:00",
           "downloadURL": "https://ipa-plus.com/public/app-gps-plus/download.php?id=jisr-hr",
           "size": 21761983,
-          "minOSVersion": 10.0
+          "minOSVersion": 10
         }
       ]
     },
@@ -884,7 +884,7 @@
           "date": "2026-10-03T04:31:36.592400+00:00",
           "downloadURL": "https://ipa-plus.com/public/app-gps-plus/download.php?id=pshrc",
           "size": 17257613,
-          "minOSVersion": 10.0
+          "minOSVersion": 10
         }
       ]
     },
@@ -918,7 +918,7 @@
           "date": "2026-10-03T04:31:52.211276+00:00",
           "downloadURL": "https://ipa-plus.com/public/app-gps-plus/download.php?id=myub",
           "size": 15966902,
-          "minOSVersion": 10.0
+          "minOSVersion": 10
         }
       ]
     },
@@ -969,7 +969,7 @@
           "date": "2026-10-03T04:32:19.787578+00:00",
           "downloadURL": "https://ipa-plus.com/public/app-gps-plus/download.php?id=my-workplace",
           "size": 17101821,
-          "minOSVersion": 10.0
+          "minOSVersion": 10
         }
       ]
     },
@@ -1122,7 +1122,7 @@
           "date": "2026-10-03T04:33:33.796996+00:00",
           "downloadURL": "https://ipa-plus.com/public/app-gps-plus/download.php?id=ontime-kaauh",
           "size": 13086922,
-          "minOSVersion": 10.0
+          "minOSVersion": 10
         }
       ]
     },
@@ -1139,7 +1139,7 @@
           "date": "2026-10-03T04:33:40.435573+00:00",
           "downloadURL": "https://ipa-plus.com/public/app-gps-plus/download.php?id=fb21c77099",
           "size": 13436300,
-          "minOSVersion": 10.0
+          "minOSVersion": 10
         }
       ]
     },
@@ -1292,7 +1292,7 @@
           "date": "2026-10-03T04:35:08.254605+00:00",
           "downloadURL": "https://ipa-plus.com/public/app-gps-plus/download.php?id=4fd7657626",
           "size": 23129039,
-          "minOSVersion": 10.0
+          "minOSVersion": 10
         }
       ]
     },
@@ -1309,7 +1309,7 @@
           "date": "2026-10-03T04:37:48.342512+00:00",
           "downloadURL": "https://ipa-plus.com/public/app-gps-plus/download.php?id=cosec-apta",
           "size": 83301352,
-          "minOSVersion": 10.0
+          "minOSVersion": 10
         }
       ]
     },
@@ -1326,7 +1326,7 @@
           "date": "2026-10-03T04:38:20.387998+00:00",
           "downloadURL": "https://ipa-plus.com/public/app-gps-plus/download.php?id=connecteam",
           "size": 66441125,
-          "minOSVersion": 10.0
+          "minOSVersion": 10
         }
       ]
     },
@@ -1343,7 +1343,7 @@
           "date": "2026-10-03T04:38:37.979151+00:00",
           "downloadURL": "https://ipa-plus.com/public/app-gps-plus/download.php?id=21a9c9dcbb",
           "size": 35483220,
-          "minOSVersion": 10.0
+          "minOSVersion": 10
         }
       ]
     },
@@ -1377,7 +1377,7 @@
           "date": "2026-10-03T04:39:41.448417+00:00",
           "downloadURL": "https://ipa-plus.com/public/app-gps-plus/download.php?id=x2",
           "size": 37289762,
-          "minOSVersion": 10.0
+          "minOSVersion": 10
         }
       ]
     },
@@ -1394,7 +1394,7 @@
           "date": "2026-10-03T04:39:55.450966+00:00",
           "downloadURL": "https://ipa-plus.com/public/app-gps-plus/download.php?id=daleelpunch",
           "size": 28820423,
-          "minOSVersion": 10.0
+          "minOSVersion": 10
         }
       ]
     },
@@ -1445,7 +1445,7 @@
           "date": "2026-10-03T04:40:41.842433+00:00",
           "downloadURL": "https://ipa-plus.com/public/app-gps-plus/download.php?id=9fe138f4ac",
           "size": 18868072,
-          "minOSVersion": 10.0
+          "minOSVersion": 10
         }
       ]
     },
@@ -1462,7 +1462,7 @@
           "date": "2026-10-03T04:41:01.198085+00:00",
           "downloadURL": "https://ipa-plus.com/public/app-gps-plus/download.php?id=ontimehr",
           "size": 39927268,
-          "minOSVersion": 10.0
+          "minOSVersion": 10
         }
       ]
     },
@@ -1483,5 +1483,6 @@
         }
       ]
     }
-  ]
+  ],
+  "iconURL": "https://repo.p3nd.fun/assets/wolfox-mark.png"
 }

@@ -100,7 +100,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         _createPipeline()
         _createSourcesDirectory()
         _exposeSourceFiles()
-        if !UserDefaults.standard.bool(forKey: "hasInitializedBuiltInSources") || UserDefaults.standard.integer(forKey: "wolfox.sourcesRevision") < 3 {
+        if !UserDefaults.standard.bool(forKey: "hasInitializedBuiltInSources") || UserDefaults.standard.integer(forKey: "wolfox.sourcesRevision") < 4 {
             _initializeBuiltInSources()
             UserDefaults.standard.set(true, forKey: "hasInitializedBuiltInSources")
         }

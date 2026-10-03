@@ -1,8 +1,8 @@
 {
   "name": "WolFox — Fake GPS",
   "identifier": "com.wolfox.source.fakegps",
-  "website": "https://fakegps.net/apps",
-  "iconURL": "https://raw.githubusercontent.com/ffhhdgffdd-maker/Ksign/ceresify-security-build/Ksign/Resources/Assets.xcassets/AppIcon.appiconset/WolFox.png",
+  "website": "https://repo.p3nd.fun",
+  "iconURL": "https://repo.p3nd.fun/assets/wolfox-mark.png",
   "tintColor": "1677FF",
   "apps": [
     {

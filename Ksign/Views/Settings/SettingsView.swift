@@ -52,13 +52,13 @@ struct SettingsView: View {
                     }
                 }
                 Section("روابط المشروع والمصادر") {
-                    Link(destination: URL(string: "https://github.com/ffhhdgffdd-maker/Ksign")!) {
+                    Link(destination: URL(string: "https://repo.p3nd.fun")!) {
                         Label("مستودع WolFox", systemImage: "chevron.left.forwardslash.chevron.right")
                     }
-                    Link(destination: URL(string: "https://fakegps.net/apps")!) {
+                    Link(destination: URL(string: "https://repo.p3nd.fun/fakegps.json")!) {
                         Label("FakeGPS", systemImage: "globe")
                     }
-                    Link(destination: URL(string: "https://ipa-plus.com/public/app-gps-plus/")!) {
+                    Link(destination: URL(string: "https://repo.p3nd.fun/ipa-plus.json")!) {
                         Label("IPA Plus", systemImage: "globe")
                     }
                 }

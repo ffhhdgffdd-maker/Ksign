@@ -109,7 +109,7 @@ extension Storage {
             ("ipa-plus", "WolFox — IPA Plus", "com.wolfox.source.ipaplus")
         ]
         for (file, name, identifier) in sources {
-            guard let url = URL(string: "https://raw.githubusercontent.com/ffhhdgffdd-maker/Ksign/ceresify-security-build/sources/" + file + ".json") else { continue }
+            guard let url = URL(string: "https://repo.p3nd.fun/" + file + ".json") else { continue }
             if let existing = getSources().first(where: { $0.identifier == identifier || $0.sourceURL == url }) {
                 existing.name = name
                 existing.identifier = identifier
@@ -121,7 +121,7 @@ extension Storage {
         }
         do {
             try context.save()
-            UserDefaults.standard.set(3, forKey: "wolfox.sourcesRevision")
+            UserDefaults.standard.set(4, forKey: "wolfox.sourcesRevision")
         } catch {
             print("Could not save WolFox sources: " + error.localizedDescription)
         }

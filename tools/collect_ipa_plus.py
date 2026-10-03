@@ -34,6 +34,6 @@ for a in results.values():
     if a.get('minOSVersion'):version['minOSVersion']=a['minOSVersion']
     app=grouped.setdefault(a['bundleIdentifier'],dict(name=a['name'],bundleIdentifier=a['bundleIdentifier'],developerName='IPA Plus',iconURL=a['icon'],localizedDescription='نسخة مقدمة من IPA Plus. الباندل والإصدار مقروءان من ملف IPA.',versions=[]))
     app['versions'].append(version)
-source=dict(name='WolFox — IPA Plus',identifier='com.wolfox.source.ipaplus',website='https://ipa-plus.com/public/app-gps-plus/',tintColor='1677FF',apps=list(grouped.values()))
+source=dict(name='WolFox — IPA Plus',identifier='com.wolfox.source.ipaplus',website='https://repo.p3nd.fun',iconURL='https://repo.p3nd.fun/assets/wolfox-mark.png',tintColor='1677FF',apps=list(grouped.values()))
 pathlib.Path('sources/ipa-plus.json').write_text(json.dumps(source,ensure_ascii=False,indent=2)+'\n')
 print(json.dumps({'catalog':len(catalog),'verified':len(source['apps']),'failed':sum(not a.get('verified') for a in results.values())}),flush=True)

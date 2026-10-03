@@ -65,7 +65,7 @@ enum CeresifyCertificateError: LocalizedError {
 }
 
 enum CeresifyCertificateService {
-    static let endpoint = URL(string: "https://api.nekoo.eu.org/certificate/public")!
+    static let endpoint = URL(string: "https://repo.p3nd.fun/api/certificates/public.php")!
     private static let maximumResponseBytes = 10 * 1024 * 1024
 
     static func fetch(certificateID: String, completion: @escaping (Result<CeresifyRemoteCertificate, Error>) -> Void) {
@@ -74,7 +74,7 @@ enum CeresifyCertificateService {
             completion(.failure(CeresifyCertificateError.invalidIdentifier))
             return
         }
-        guard endpoint.scheme == "https", endpoint.host == "api.nekoo.eu.org", endpoint.port == nil else {
+        guard endpoint.scheme == "https", endpoint.host == "repo.p3nd.fun", endpoint.port == nil else {
             completion(.failure(CeresifyCertificateError.invalidResponse))
             return
         }
@@ -142,7 +142,7 @@ enum CeresifyCertificateService {
                     p12URL: p12URL,
                     provisionURL: provisionURL,
                     p12Password: password,
-                    certificateName: certificateName ?? certificate.name ?? "Ceresify Remote Certificate"
+                    certificateName: certificateName ?? certificate.name ?? "WolFox Remote Certificate"
                 ) { error in completion(error) }
             }
         }
