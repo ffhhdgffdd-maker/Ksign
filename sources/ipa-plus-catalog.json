@@ -1,0 +1,536 @@
+{
+  "name": "IPA Plus GPS applications",
+  "website": "https://ipa-plus.com/public/app-gps-plus/",
+  "retrievedAt": "2026-10-03",
+  "status": "catalog-only; IPA versions and sizes not verified; not an AltStore source",
+  "apps": [
+    {
+      "name": "جمعية الشاطبي التعليمية - رافد",
+      "bundle": "com.rafed.shatiby.panel",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785327351_8e399d.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=495bf2af1e"
+    },
+    {
+      "name": "Darwinbox",
+      "bundle": "com.darwinbox.darwinboxswift",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785327416_d3c6f6.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=darwinbox"
+    },
+    {
+      "name": "Truein User",
+      "bundle": "com.gotruein.one",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785326963_78b8cf.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=truein-user"
+    },
+    {
+      "name": "Malachite",
+      "bundle": "com.creadev.malachite",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785326812_a2b53f.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=malachite"
+    },
+    {
+      "name": "Employee Switch",
+      "bundle": "sa.gov.ncw.employeeswitch",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785326929_9ed7ba.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=employee-switch"
+    },
+    {
+      "name": "Bayzat",
+      "bundle": "com.bayzat.benefits",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1789958352_a1a548.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=bayzat"
+    },
+    {
+      "name": "خدمات الموظفين",
+      "bundle": "sa.gov.pv.internal",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785326948_b17680.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=bcc3ed6c28"
+    },
+    {
+      "name": "Availo Plus",
+      "bundle": "app.t2.availo",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1789902624_9ef258.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=availo-plus"
+    },
+    {
+      "name": "Hader",
+      "bundle": "sa.edu.su.hader",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785326830_38fba8.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=hader"
+    },
+    {
+      "name": "بوابتي",
+      "bundle": "com.sec.EmployeeApp",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785326657_428f1e.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=a494a140c4"
+    },
+    {
+      "name": "ubiHrm",
+      "bundle": "com.ubihrm.ubihrm",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785326671_c7d391.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=ubihrm"
+    },
+    {
+      "name": "Bolt Driver",
+      "bundle": "ee.taxify.driver",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785326919_dee2ab.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=bolt-driver"
+    },
+    {
+      "name": "PULSE 360",
+      "bundle": "com.gccksa.pulse360",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785326643_9b7888.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=pulse-360"
+    },
+    {
+      "name": "وزارة التربية",
+      "bundle": "com.moe.moeMobileApp",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785326715_616d6e.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=b44d0a73a5"
+    },
+    {
+      "name": "ZenHR",
+      "bundle": "com.zenhr",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1788863875_cd25fb.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=zenhr"
+    },
+    {
+      "name": "TAKID - تأكيد",
+      "bundle": "com.clueweb.takidguard",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785326956_2a552c.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=takid"
+    },
+    {
+      "name": "UJ Connect",
+      "bundle": "sa.edu.uj.UjApp",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785326868_f59947.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=uj-connect"
+    },
+    {
+      "name": "الري",
+      "bundle": "com.sio.rai",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785326939_c92e1c.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=46def3f476"
+    },
+    {
+      "name": "Wafi 360",
+      "bundle": "com.romoz.wafi360",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785326789_b4dccc.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=wafi-360"
+    },
+    {
+      "name": "MenaME-Plus⁺",
+      "bundle": "com.menaitech.mename",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1788302537_e035f5.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=mename-plus"
+    },
+    {
+      "name": "اكتفاء",
+      "bundle": "com.zadip.ektefa.v2",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1788871120_9f4f6b.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=548cdf12bc"
+    },
+    {
+      "name": "Smart Attendance",
+      "bundle": "com.mohapp.smartattendance",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785327003_a17d59.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=smart-attendance"
+    },
+    {
+      "name": "Ringo HR",
+      "bundle": "com.ringomedia.hr",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785326975_2c4813.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=ringo-hr"
+    },
+    {
+      "name": "Dynamics ESS 365",
+      "bundle": "com.restart.SoleTech.Temp.365",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1789513670_d64813.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=dynamics-ess-365"
+    },
+    {
+      "name": "Locate Go",
+      "bundle": "sa.lg.ios.locate",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785327062_78ae8a.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=locate-go"
+    },
+    {
+      "name": "Al Habib MoheM",
+      "bundle": "com.cloudsolutions.alhabibmohemm",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785327051_620f6c.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=al-habib-mohem"
+    },
+    {
+      "name": "mawarid",
+      "bundle": "gov.rcjy.mawarid",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785910881_d84cb8.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=mawarid"
+    },
+    {
+      "name": "حاضر بلس",
+      "bundle": "sa.alfursan.it.apps.ontimeplus",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1789513664_fb6a48.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=8807f67ae4"
+    },
+    {
+      "name": "MyERP",
+      "bundle": "net.zone.bitaqati.ios.GCA.PROD",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785327071_e76ae0.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=myerp"
+    },
+    {
+      "name": "Mawared",
+      "bundle": "sa.gov.moh",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785327066_ed6dae.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=mawared"
+    },
+    {
+      "name": "MARFA - مرفأ",
+      "bundle": "net.zone.bitaqati.nwc",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1787608344_5f452d.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=marfa"
+    },
+    {
+      "name": "Es App",
+      "bundle": "sa.gov.moia.es.amer2",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785327133_74743e.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=es-app"
+    },
+    {
+      "name": "Mawjood",
+      "bundle": "com.bawrek.mawjood",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785327108_01b3a8.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=mawjood"
+    },
+    {
+      "name": "Tanaqol ECare",
+      "bundle": "com.tanaqol.employee.tanaqolAttendance",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785327012_53c03c.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=tanaqol-ecare"
+    },
+    {
+      "name": "مرن Marn",
+      "bundle": "com.marnapp",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785327099_c1f34f.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=marn"
+    },
+    {
+      "name": "AMER",
+      "bundle": "sa.nhc.mob.sshr",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1788734395_cdba91.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=amer"
+    },
+    {
+      "name": "تطبيق الأمانة",
+      "bundle": "taifcity.taifcityapp",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1786912642_b72cb3.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=04a8ed5103"
+    },
+    {
+      "name": "Dawmt",
+      "bundle": "com.cannytechs.dawmtapp",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1786632356_40e156.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=dawmt"
+    },
+    {
+      "name": "Rehla",
+      "bundle": "com.onmyway.Rehla",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785327085_1753a9.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=rehla"
+    },
+    {
+      "name": "Hadir",
+      "bundle": "sa.com.bc.hadirv3",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785327139_a6975e.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=hadir"
+    },
+    {
+      "name": "PalmHR",
+      "bundle": "com.codeit.palmhr",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785327126_e78977.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=palmhr"
+    },
+    {
+      "name": "تكامل",
+      "bundle": "com.magattend.app",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785327056_036998.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=623559996a"
+    },
+    {
+      "name": "منسوبي المساجد",
+      "bundle": "sa.gov.moia.mosques2",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785327174_1babfd.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=695002d055"
+    },
+    {
+      "name": "Msar Captain",
+      "bundle": "com.bd.appstick.msaramendriver",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785327118_39642b.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=msar-captain"
+    },
+    {
+      "name": "خدماتي بلس",
+      "bundle": "com.bog.essmobile",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785327154_273ab2.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=7e7f694cab"
+    },
+    {
+      "name": "KayanHR",
+      "bundle": "com.uba.kayanhr",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785327222_781261.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=kayanhr"
+    },
+    {
+      "name": "حياك حج",
+      "bundle": "sa.alfursan.it.apps.hayyakplus.ios",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785327190_cb2055.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=78e5340841"
+    },
+    {
+      "name": "Jisr HR",
+      "bundle": "com.clickapps.jisr",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1788657452_ef4391.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=jisr-hr"
+    },
+    {
+      "name": "بصمتي - Basmati",
+      "bundle": "ae.gov.shjmun.basmati",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785327164_432212.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=basmati"
+    },
+    {
+      "name": "K360",
+      "bundle": "com.ehub.sa",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1789513657_ed1f95.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=e-hub"
+    },
+    {
+      "name": "Odex SS",
+      "bundle": "com.expsa.odex",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785327241_178545.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=odex-ss"
+    },
+    {
+      "name": "PSHRC بوابة الموظف",
+      "bundle": "com.pshrc.hrPortal",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1786368701_570f0f.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=pshrc"
+    },
+    {
+      "name": "HUDURI",
+      "bundle": "com.t2.AvailoHader",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785327306_589aa1.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=huduri"
+    },
+    {
+      "name": "MyUB",
+      "bundle": "sa.edu.ub.myub",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1787150226_ba567c.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=myub"
+    },
+    {
+      "name": "Nupconeers",
+      "bundle": "com.nupco.hr",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785327197_fbae7a.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=nupconeers"
+    },
+    {
+      "name": "iHRvision",
+      "bundle": "com.ihr.ihrvision",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785327234_5f8cc6.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=ihrvision"
+    },
+    {
+      "name": "My Workplace",
+      "bundle": "com.awaeljo.myworkplace",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1788091066_96feed.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=my-workplace"
+    },
+    {
+      "name": "ReachGo",
+      "bundle": "com.reachgroup.reachGOv2",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785327299_0da392.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=reachgo"
+    },
+    {
+      "name": "إمارة المدينة",
+      "bundle": "gov.almadinah.services",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785327256_be88c0.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=187c456676"
+    },
+    {
+      "name": "Paaet - تطبيقي",
+      "bundle": "kw.edu.paaet.paaetmobile",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785327281_8b7216.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=paaet"
+    },
+    {
+      "name": "Idaratech",
+      "bundle": "com.idaratech.apple",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785327313_8d0c0d.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=idaratech"
+    },
+    {
+      "name": "Tahakom",
+      "bundle": "com.tahakom.mytahakom",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1787308273_0e2155.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=tahakom"
+    },
+    {
+      "name": "Hudoor",
+      "bundle": "Hudoor.net",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785327318_aacb61.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=hudoor"
+    },
+    {
+      "name": "نورت",
+      "bundle": "sa.tamkeentech.attendance.app",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785327275_c72cc8.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=bdd7e78ed9"
+    },
+    {
+      "name": "KSU",
+      "bundle": "com.domainname.KSUStaff",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785327182_4af135.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=ksu"
+    },
+    {
+      "name": "OnTime KAAUH",
+      "bundle": "com.attendanceapp.attendanceApp",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785327327_6c685f.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=ontime-kaauh"
+    },
+    {
+      "name": "بصمتي - بلدية الكويت",
+      "bundle": "com.km.attendance",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785327322_92e17c.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=fb21c77099"
+    },
+    {
+      "name": "Basmtak",
+      "bundle": "com.basmtak.app",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785327290_04f490.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=basmtak"
+    },
+    {
+      "name": "SAHL",
+      "bundle": "stc.sahl.dynamicform",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785327210_4b3937.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=sahl"
+    },
+    {
+      "name": "حساب المواطن",
+      "bundle": "com.mlsd.citizenaccount",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785327331_d5266f.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=90709f300b"
+    },
+    {
+      "name": "Oracle Fusion Apps",
+      "bundle": "com.oracle.cloud.hcm.mobile",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785327335_3114c1.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=oracle-fusion-apps"
+    },
+    {
+      "name": "ZKBio Time",
+      "bundle": "com.zkteco.biotime",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785327340_213ac5.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=zkbio-time"
+    },
+    {
+      "name": "TVTC",
+      "bundle": "gov.tvtc.itvtc",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785327345_6e8d7e.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=tvtc"
+    },
+    {
+      "name": "ITYAAN",
+      "bundle": "com.rke.individual.MowJood",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1789893130_361cca.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=ityaan"
+    },
+    {
+      "name": "Hader",
+      "bundle": "sa.edu.su.hader.sa",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1789642512_02f5b9.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=hader-1"
+    },
+    {
+      "name": "منسوبي المساجد",
+      "bundle": "sa.gov.moia.mosques-2",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1788302548_c9a688.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=4fd7657626"
+    },
+    {
+      "name": "Lark",
+      "bundle": "com.larksuite.lark",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785327364_b01e58.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=lark"
+    },
+    {
+      "name": "COSEC APTA",
+      "bundle": "com.matrixcomsec.ess",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1788474945_e8ecd3.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=cosec-apta"
+    },
+    {
+      "name": "Connecteam",
+      "bundle": "com.connecteam.Connecteam",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1786912704_175195.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=connecteam"
+    },
+    {
+      "name": "معاً",
+      "bundle": "com.maan.co",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1786368902_a5b02d.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=21a9c9dcbb"
+    },
+    {
+      "name": "مدني خدمات",
+      "bundle": "sa.gov.madaniservices.app",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1789457432_71ce4a.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=5c25b23e62"
+    },
+    {
+      "name": "X2",
+      "bundle": "com.petrogistix.timex",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1787150224_98308e.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=x2"
+    },
+    {
+      "name": "Daleelpunch",
+      "bundle": "com.example.daleelpunch",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1787150237_b0b41d.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=daleelpunch"
+    },
+    {
+      "name": "Mawared",
+      "bundle": "sa.gov.moh.v4",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1789513678_9857a1.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=mawared-1"
+    },
+    {
+      "name": "مُنجز",
+      "bundle": "sa.edu.mu.munjez",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1787817327_28c105.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=74e2f34309"
+    },
+    {
+      "name": "أمانة جازان",
+      "bundle": "com.slneeit.jazan",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1787608353_42ee6e.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=9fe138f4ac"
+    },
+    {
+      "name": "OnTimeHR",
+      "bundle": "com.companyname.ontimehr",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1788734385_26a297.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=ontimehr"
+    },
+    {
+      "name": "المستجيب",
+      "bundle": "com.srca.apps.volunteer",
+      "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1789786269_8a63bf.png",
+      "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=93cfd1bd14"
+    }
+  ]
+}
