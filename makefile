@@ -43,6 +43,7 @@ $(SCHEMES): deps
 	codesign --force --sign - --timestamp=none "$(STAGE)/Payload/$@.app"
 
 	cp deps/* "$(STAGE)/Payload/$@.app/" || true
+	cp assets/WolFox-*.dylib "$(STAGE)/Payload/$@.app/"
 
 	rm -rf "$(STAGE)/Payload/$@.app/_CodeSignature"
 	ln -sf "$(STAGE)/Payload" Payload

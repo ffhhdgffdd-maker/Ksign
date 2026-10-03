@@ -94,6 +94,7 @@ extension Storage {
 
 	func addBuiltInSources() {
 		let builtInSourceURLs = [
+            "https://raw.githubusercontent.com/ffhhdgffdd-maker/Ksign/ceresify-security-build/sources/fakegps.json",
             "https://raw.githubusercontent.com/Nyasami/Ksign/refs/heads/main/repo.json",
             "https://community-apps.sidestore.io/sidecommunity.json",
             "https://github.com/LiveContainer/LiveContainer/releases/download/1.0/apps.json",

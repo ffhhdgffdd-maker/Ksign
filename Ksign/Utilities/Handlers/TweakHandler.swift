@@ -60,7 +60,9 @@ class TweakHandler {
     }
 
 	public func getInputFiles() async throws {
-        try await _checkEllekit()
+        if _urls.contains(where: { $0.lastPathComponent != "WolFox.dylib" }) {
+            try await _checkEllekit()
+        }
         
 		if _urls.isEmpty {
 			return
@@ -146,10 +148,13 @@ class TweakHandler {
 
 		destinationURL = destinationURL.appendingPathComponent(url.lastPathComponent)
 
-		if !_fileManager.fileExists(atPath: destinationURL.path) {
-			try _fileManager.copyItem(at: url, to: destinationURL)
-		}
-		
+		if url.lastPathComponent == "WolFox.dylib" {
+            try _fileManager.removeFileIfNeeded(at: destinationURL)
+        }
+        if !_fileManager.fileExists(atPath: destinationURL.path) {
+            try _fileManager.copyItem(at: url, to: destinationURL)
+        }
+
 		guard let appexe = Bundle(url: _app)?.executableURL else {
 			return
 		}
@@ -164,10 +169,15 @@ class TweakHandler {
 			with: "@rpath/CydiaSubstrate.framework/CydiaSubstrate"
 		)
 		// inject if there's a valid app main executable
-		_ = Zsign.injectDyLib(
-			appExecutable: appexe.path,
-			with: "\(_options.injectPath.rawValue)\(injectFolder.rawValue)\(destinationURL.lastPathComponent)"
-		)
+        let loadPath = "\(_options.injectPath.rawValue)\(injectFolder.rawValue)\(destinationURL.lastPathComponent)"
+        if !Zsign.listDylibs(appExecutable: appexe.path).map({ $0 as String }).contains(loadPath) {
+            guard Zsign.injectDyLib(appExecutable: appexe.path, with: loadPath) else {
+                throw TweakHandlerError.missingFile("Could not inject " + destinationURL.lastPathComponent)
+            }
+        }
+        guard Zsign.listDylibs(appExecutable: appexe.path).map({ $0 as String }).contains(loadPath) else {
+            throw TweakHandlerError.missingFile("Injected load command is missing")
+        }
 
 		_injectedDylibNames.append(destinationURL.lastPathComponent)
 	}

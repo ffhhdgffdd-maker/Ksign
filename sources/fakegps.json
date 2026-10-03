@@ -1,0 +1,1131 @@
+{
+  "name": "WolFox — Fake GPS",
+  "identifier": "com.wolfox.source.fakegps",
+  "website": "https://fakegps.net/apps",
+  "iconURL": "https://raw.githubusercontent.com/ffhhdgffdd-maker/Ksign/ceresify-security-build/Ksign/Resources/Assets.xcassets/AppIcon.appiconset/WolFox.png",
+  "tintColor": "1677FF",
+  "apps": [
+    {
+      "name": "موارد (Mawared)",
+      "bundleIdentifier": "sa.gov.moh",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1782061129-sOH7tuDV.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "5.5.2",
+          "buildVersion": "2",
+          "date": "2026-06-21T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/moard-mawared.ipa",
+          "size": 33818318,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "HUDURY - حضوري",
+      "bundleIdentifier": "com.t2.AvailoHader",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1789069148-4I0AfO3c.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "8.3",
+          "buildVersion": "8.4",
+          "date": "2026-09-10T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/hudury-hdory.ipa",
+          "size": 17095745,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "حاضر - تطبيق إدارة الدوام",
+      "bundleIdentifier": "sa.com.bc.hadirv3",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1782061128-qmVkPOg8.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "6.1.20",
+          "buildVersion": "32",
+          "date": "2026-06-21T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/hadr-ttbyk-adar-aldoam.ipa",
+          "size": 22556331,
+          "minOSVersion": 10
+        }
+      ]
+    },
+    {
+      "name": "Availo Plus",
+      "bundleIdentifier": "app.t2.availo",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1789907221-kCwTbmlP.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "2.7",
+          "buildVersion": "2",
+          "date": "2026-09-20T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/availo-plus.ipa",
+          "size": 76301868,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "Hader - حاضر",
+      "bundleIdentifier": "sa.edu.su.hader",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1782096038-iVvgctXD.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "1.0.3",
+          "buildVersion": "10",
+          "date": "2026-06-22T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/hader-hadr.ipa",
+          "size": 73085869,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "مساجد",
+      "bundleIdentifier": "sa.gov.moia.mosques2",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1782061128-J3FUIxPh.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "4.0.9",
+          "buildVersion": "1",
+          "date": "2026-06-21T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/msagd.ipa",
+          "size": 24683027,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "Ektefa - V2",
+      "bundleIdentifier": "com.zadip.ektefa.v2",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1787176672-LP9IZfEr.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "6.3.0",
+          "buildVersion": "444",
+          "date": "2026-08-19T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/ektefa-v2.ipa",
+          "size": 34715675,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "Azar: Chat, Meet Friends",
+      "bundleIdentifier": "com.hpcnt.azar",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1783780204-CuctFttS.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "7.7.0",
+          "buildVersion": "830",
+          "date": "2026-07-11T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/azar-chat-meet-friends.ipa",
+          "size": 107917296,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "Al Habib MoheM",
+      "bundleIdentifier": "com.cloudsolutions.alhabibmohemm",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1782061128-8rZq4lf3.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "3.7.997",
+          "buildVersion": "1",
+          "date": "2026-06-21T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/al-habib-mohem.ipa",
+          "size": 38390494,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "MARFA - مرفأ",
+      "bundleIdentifier": "net.zone.bitaqati.nwc",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1786380313-z7viQ70f.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "1.3.20",
+          "buildVersion": "3",
+          "date": "2026-08-10T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/marfa-mrfa.ipa",
+          "size": 66120008,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "Mawarid",
+      "bundleIdentifier": "gov.rcjy.mawarid",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1785744170-tIGtNpyp.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "1.6.9",
+          "buildVersion": "135",
+          "date": "2026-08-03T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/mawarid.ipa",
+          "size": 38405316,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "وزارة التربية - الكويت",
+      "bundleIdentifier": "com.moe.moeMobileApp",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1782220713-LYAG0YU8.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "1.2.35",
+          "buildVersion": "1",
+          "date": "2026-06-23T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/ozar-altrby-alkoyt.ipa",
+          "size": 77741240,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "حاضر+",
+      "bundleIdentifier": "sa.alfursan.it.apps.ontimeplus",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1790374966-mafDR9jp.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "1.1.43",
+          "buildVersion": "112",
+          "date": "2026-09-25T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/hadr.ipa",
+          "size": 43329751,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "Jisr HR",
+      "bundleIdentifier": "com.clickapps.jisr",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1789160118-LcmaJGHb.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "10.0.7",
+          "buildVersion": "10.7",
+          "date": "2026-09-11T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/jisr-hr.ipa",
+          "size": 23470711,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "آمـر",
+      "bundleIdentifier": "sa.gov.moia.es.amer2",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1782061129-VtKDdlGL.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "2.6.0",
+          "buildVersion": "17",
+          "date": "2026-06-21T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/amr.ipa",
+          "size": 27071128,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "الري",
+      "bundleIdentifier": "com.sio.rai",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1782061129-W11PmMtp.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "1.1.14",
+          "buildVersion": "1",
+          "date": "2026-06-21T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/alry.ipa",
+          "size": 47523325,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "Ringo HR",
+      "bundleIdentifier": "com.ringomedia.hr",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1789562573-nbn3as7r.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "1.3.42",
+          "buildVersion": "215",
+          "date": "2026-09-16T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/ringo-hr.ipa",
+          "size": 47012776,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "Tanaqol ECare",
+      "bundleIdentifier": "com.tanaqol.employee.tanaqolAttendance",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1788975663-7k3vxa6Y.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "1.8.0",
+          "buildVersion": "36",
+          "date": "2026-09-09T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/tanaqol-ecare.ipa",
+          "size": 40041389,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "PSHRC بوابة الموظف",
+      "bundleIdentifier": "com.pshrc.hrPortal",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1786379917-REyls1KS.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "2.1.1",
+          "buildVersion": "1",
+          "date": "2026-08-10T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/pshrc-boab-almothf.ipa",
+          "size": 19713307,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "TAKAMUL-MAG",
+      "bundleIdentifier": "com.magattend.app",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1783491493-zC86rCCY.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "1.0.5",
+          "buildVersion": "1",
+          "date": "2026-07-08T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/takamul-mag.ipa",
+          "size": 35777244,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "KayanHR",
+      "bundleIdentifier": "com.uba.kayanhr",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1782095691-rGkotib8.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "2.1.7",
+          "buildVersion": "1",
+          "date": "2026-06-22T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/kayanhr.ipa",
+          "size": 19746409,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "MenaMe Plus⁺",
+      "bundleIdentifier": "com.menaitech.mename",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1782095691-I9IXTJWs.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "3.9.9.9",
+          "buildVersion": "1",
+          "date": "2026-06-22T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/mename-plus.ipa",
+          "size": 45498862,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "Timestamp Camera Basic",
+      "bundleIdentifier": "com.jeyluta.camera7free",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1782096037-gIBZrSE3.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "1.156",
+          "buildVersion": "1.155",
+          "date": "2026-06-22T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/timestamp-camera-basic.ipa",
+          "size": 10163876,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "ZenHR",
+      "bundleIdentifier": "com.zenhr",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1785324053-KAbJOLM2.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "30.8.19",
+          "buildVersion": "1007",
+          "date": "2026-07-29T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/zenhr.ipa",
+          "size": 66561633,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "Logix-SS",
+      "bundleIdentifier": "com.logixErp.logixApp",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1785443689-zNtyJD4f.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "2.0.25",
+          "buildVersion": "25",
+          "date": "2026-07-30T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/logix-ss.ipa",
+          "size": 33133087,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "Nawart",
+      "bundleIdentifier": "sa.tamkeentech.attendance.app",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1784564627-9VQfCCvE.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "2.7.0",
+          "buildVersion": "44",
+          "date": "2026-07-20T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/nawart.ipa",
+          "size": 17590437,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "أمانة جازان",
+      "bundleIdentifier": "com.slneeit.jazan",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1787679233-9MgxGuNZ.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "5.29.0",
+          "buildVersion": "94",
+          "date": "2026-08-25T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/aman-gazan.ipa",
+          "size": 20667554,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "Basmtak HR",
+      "bundleIdentifier": "com.basmtak.app",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1788293366-BupeIThe.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "2.3.3",
+          "buildVersion": "270",
+          "date": "2026-09-01T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/basmtak-hr.ipa",
+          "size": 17190942,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "Mateline X",
+      "bundleIdentifier": "com.huawei.ows.mobile",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1782837597-5USANjHF.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "26.5.220",
+          "buildVersion": "8",
+          "date": "2026-06-30T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/mateline-x.ipa",
+          "size": 74292879,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "TVTC",
+      "bundleIdentifier": "gov.tvtc.itvtc",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1782289562-qq4caukq.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "12.24",
+          "buildVersion": "1",
+          "date": "2026-06-24T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/tvtc.ipa",
+          "size": 8417903,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "PlayStation App",
+      "bundleIdentifier": "sa.gov.mot.attendance",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1782208218-cuiC7Jqq.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "2.3.0",
+          "buildVersion": "20",
+          "date": "2026-06-23T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/playstation-app.ipa",
+          "size": 28696476,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "Smart Attendance - MOH",
+      "bundleIdentifier": "com.mohapp.smartattendance",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1782557191-ywe74RuA.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "2.2.0",
+          "buildVersion": "230",
+          "date": "2026-06-27T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/smart-attendance-moh.ipa",
+          "size": 48135114,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "تالنتو | Talento",
+      "bundleIdentifier": "com.mowzf.mowzfHr",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1782677965-SQkciEpL.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "4.0.8",
+          "buildVersion": "50",
+          "date": "2026-06-28T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/talnto-talento.ipa",
+          "size": 37072553,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "PalmHR",
+      "bundleIdentifier": "com.codeit.palmhr",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1782247648-iXnysgaN.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "1.5.1",
+          "buildVersion": "295",
+          "date": "2026-06-23T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/palmhr.ipa",
+          "size": 28986364,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "WhosHere",
+      "bundleIdentifier": "com.myrete.WhosHere",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1782249417-5HeKuQFt.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "5.15.15",
+          "buildVersion": "5.15.15",
+          "date": "2026-06-23T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/whoshere.ipa",
+          "size": 16452825,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "نظام حاضر - hader",
+      "bundleIdentifier": "sa.edu.su.hader.sa",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1789650247-L7KZhBiM.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "1.2.2",
+          "buildVersion": "1",
+          "date": "2026-09-17T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/ntham-hadr-hader.ipa",
+          "size": 76058072,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "Manafth Authenticator",
+      "bundleIdentifier": "com.tcc.ManafthAuthenticator",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1782405038-l7lKXYrf.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "1.2.2",
+          "buildVersion": "1",
+          "date": "2026-06-25T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/manafth-authenticator.ipa",
+          "size": 1972734,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "Ma'an",
+      "bundleIdentifier": "com.maan.co",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1790176332-7EPYcvpV.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "1.0.17",
+          "buildVersion": "1",
+          "date": "2026-09-23T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/maan.ipa",
+          "size": 37121835,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "HR Enterprise System",
+      "bundleIdentifier": "com.doubleclick.hre",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1782676060-Fi341bN8.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "2.3.14",
+          "buildVersion": "7",
+          "date": "2026-06-28T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/hr-enterprise-system.ipa",
+          "size": 20584977,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "Dawmt",
+      "bundleIdentifier": "com.cannytechs.dawmtapp",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1790760156-oKgYVdeQ.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "5.0.26",
+          "buildVersion": "13",
+          "date": "2026-09-30T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/dawmt.ipa",
+          "size": 23195964,
+          "minOSVersion": 10
+        }
+      ]
+    },
+    {
+      "name": "Mawjood موجود",
+      "bundleIdentifier": "com.bawrek.mawjood",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1783449594-pbGeqYcF.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "7.01",
+          "buildVersion": "1",
+          "date": "2026-07-07T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/mawjood-mogod.ipa",
+          "size": 30659904,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "مدني خدمات",
+      "bundleIdentifier": "sa.gov.madaniservices.app",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1789387947-FxcJxCOL.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "1.0.44",
+          "buildVersion": "22",
+          "date": "2026-09-14T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/mdny-khdmat.ipa",
+          "size": 99793483,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "KFSH Employee",
+      "bundleIdentifier": "com.kfshrc.IG-Mobile",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1783166616-TJDLR79A.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "5.2.9",
+          "buildVersion": "42",
+          "date": "2026-07-04T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/kfsh-employee.ipa",
+          "size": 25571344,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "رحلة",
+      "bundleIdentifier": "com.onmyway.Rehla",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1782798531-XDfuauU6.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "7.0.2",
+          "buildVersion": "1",
+          "date": "2026-06-30T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/rhl.ipa",
+          "size": 32533858,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "Bolt Driver: Drive & Earn",
+      "bundleIdentifier": "ee.taxify.driver",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1782798534-ahi6t7I1.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "137.0",
+          "buildVersion": "207585586",
+          "date": "2026-06-30T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/bolt-driver-drive-earn.ipa",
+          "size": 64753192,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "Locate GO",
+      "bundleIdentifier": "sa.lg.ios.locate",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1782798535-bR8QUWpV.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "4.0.1",
+          "buildVersion": "1",
+          "date": "2026-06-30T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/locate-go.ipa",
+          "size": 41903197,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "X2 - Workforce Management",
+      "bundleIdentifier": "com.petrogistix.timex",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1786902929-6W5Urhfb.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "1.1.13",
+          "buildVersion": "223",
+          "date": "2026-08-16T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/x2-workforce-management.ipa",
+          "size": 39628629,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "تطبيق أمانة عسير الموحد",
+      "bundleIdentifier": "com.alqemam.aes.QAttendance",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1783108966-UxRo8rzm.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "13.7.00",
+          "buildVersion": "4",
+          "date": "2026-07-03T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/ttbyk-aman-aasyr-almohd.ipa",
+          "size": 11740458,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "OnTime HR",
+      "bundleIdentifier": "com.companyname.ontimehr",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1784422438-8L9HtURw.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "52.1",
+          "buildVersion": "52",
+          "date": "2026-07-19T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/ontime-hr.ipa",
+          "size": 42552613,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "K360",
+      "bundleIdentifier": "com.ehub.sa",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1790373356-OtdUsYbu.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "1.0.26",
+          "buildVersion": "10",
+          "date": "2026-09-25T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/k360.ipa",
+          "size": 71808722,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "MawredHR",
+      "bundleIdentifier": "com.mawredhr",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1785641602-pcFHajuU.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "3.0.2",
+          "buildVersion": "58",
+          "date": "2026-08-02T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/mawredhr.ipa",
+          "size": 15198597,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "تطبيق الموظف - أمانة المدينة",
+      "bundleIdentifier": "com.amana-md.prjMadenaEmployees",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1785854767-TwZviM5a.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "4.6.1",
+          "buildVersion": "86",
+          "date": "2026-08-04T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/ttbyk-almothf-aman-almdyn.ipa",
+          "size": 14054359,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "Mawqoot",
+      "bundleIdentifier": "com.mawqoot.app",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1785876569-g7FkJaMh.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "4.3.2",
+          "buildVersion": "50",
+          "date": "2026-08-04T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/mawqoot.ipa",
+          "size": 11881853,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "موارد - Mawared",
+      "bundleIdentifier": "sa.gov.moh.v4",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1790435759-4e1Zknfq.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "4.1.1",
+          "buildVersion": "1",
+          "date": "2026-09-26T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/moard-mawared-1.ipa",
+          "size": 54360573,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "MU Munjez",
+      "bundleIdentifier": "sa.edu.mu.munjez",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1787159783-2yjhe4q3.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "1.0.2",
+          "buildVersion": "28",
+          "date": "2026-08-19T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/mu-munjez.ipa",
+          "size": 23734467,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "Dawami - دوامي",
+      "bundleIdentifier": "com.dawami.apps",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1787176680-PYHz9Dmw.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "3.6.8",
+          "buildVersion": "195",
+          "date": "2026-08-19T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/dawami-doamy.ipa",
+          "size": 103603370,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "Escoteleerp",
+      "bundleIdentifier": "com.electronss.flutterodoohrescoteleerp",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1788364988-VxtcIc9h.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "1.1.8",
+          "buildVersion": "32",
+          "date": "2026-09-02T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/escoteleerp.ipa",
+          "size": 27322816,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "Malachite",
+      "bundleIdentifier": "com.creadev.malachite",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1788610570-e03K41e8.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "6.0.4",
+          "buildVersion": "6107",
+          "date": "2026-09-05T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/malachite.ipa",
+          "size": 71089624,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "MyUB University",
+      "bundleIdentifier": "sa.edu.ub.myub",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1789388633-aymOva5j.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "3.1.4",
+          "buildVersion": "1.0.0",
+          "date": "2026-09-14T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/myub-university.ipa",
+          "size": 17180168,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "My SWA.",
+      "bundleIdentifier": "sa.gov.swa.portal",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1790105910-iBQrLs68.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "1.11.16",
+          "buildVersion": "159",
+          "date": "2026-09-22T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/my-swa.ipa",
+          "size": 52808295,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "VerbTeX LaTeX Editor",
+      "bundleIdentifier": "com.mew.victoryarch",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1789388637-LfCVI6kQ.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "5.6.9",
+          "buildVersion": "60",
+          "date": "2026-09-14T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/verbtex-latex-editor.ipa",
+          "size": 48955922,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "My Bahri",
+      "bundleIdentifier": "com.bahriapp.EmployeeHub",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1789388644-CotTFr0n.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "1.0.11",
+          "buildVersion": "15",
+          "date": "2026-09-14T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/my-bahri.ipa",
+          "size": 13617207,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "OnTime KAAUH",
+      "bundleIdentifier": "com.attendanceapp.attendanceApp",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1789562570-J2BHupQR.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "1.22.0",
+          "buildVersion": "66",
+          "date": "2026-09-16T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/ontime-kaauh.ipa",
+          "size": 13919307,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "Osool 360",
+      "bundleIdentifier": "com.osool360.osool360",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1790005074-aaKyQgxu.jpg",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "3.9.9",
+          "buildVersion": "23",
+          "date": "2026-09-21T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/osool-360.ipa",
+          "size": 34367433,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "خدماتي بلس – ديوان المظالم",
+      "bundleIdentifier": "com.bog.essmobile",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1790669108-rcceurPf.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "1.3.2",
+          "buildVersion": "2",
+          "date": "2026-09-29T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/khdmaty-bls-dyoan-almthalm.ipa",
+          "size": 24273738,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "اثبات التواجد",
+      "bundleIdentifier": "com.worldofss.MotwagedApp",
+      "developerName": "Fake GPS",
+      "iconURL": "https://fakegps.net/supported-app-icons/icon-1790760159-vpNbaaWq.png",
+      "localizedDescription": "نسخة مقدمة من Fake GPS. بيانات الإصدار والباندل مقروءة من ملف IPA؛ وظائف التطبيق لم تختبر على جهاز.",
+      "versions": [
+        {
+          "version": "2.2",
+          "buildVersion": "8",
+          "date": "2026-09-30T00:00:00Z",
+          "downloadURL": "https://fakegps.net/apps/athbat-altoagd.ipa",
+          "size": 16745902,
+          "minOSVersion": "10.0"
+        }
+      ]
+    }
+  ]
+}

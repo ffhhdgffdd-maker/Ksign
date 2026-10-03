@@ -19,6 +19,18 @@ struct SigningTweaksView: View {
 	// MARK: Body
 	var body: some View {
 		NBList(.localized("Tweaks")) {
+            Section("حقن WolFox") {
+                Picker("النسخة", selection: Binding(
+                    get: { options.bundledWolFoxEdition ?? "none" },
+                    set: { options.bundledWolFoxEdition = $0 == "none" ? nil : $0 }
+                )) {
+                    Text("بدون حقن").tag("none")
+                    Text("WolFox Full").tag("Full")
+                    Text("WolFox Lite").tag("Lite")
+                }
+                Text("اختر نسخة واحدة. يُحقن WolFox في التطبيق الرئيسي فقط.")
+                    .font(.footnote).foregroundStyle(.secondary)
+            }
 			NBSection(.localized("Injection")) {
 				Picker(selection: $options.injectPath) {
 					ForEach(Options.InjectPath.allCases, id: \.rawValue) { path in

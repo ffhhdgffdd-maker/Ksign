@@ -20,6 +20,26 @@ struct SigningDylibView: View {
 	var body: some View {
 		NBList(.localized("Dylibs"), type: .list) {
 			Section {
+                Button("إزالة FakeGps وGpsPlus المحقونة", systemImage: "trash") {
+                    guard var updated = options else { return }
+                    let injected = _dylibs.filter { path in
+                        let name = URL(fileURLWithPath: path).lastPathComponent.lowercased()
+                            .filter { $0.isLetter || $0.isNumber }
+                        return name.contains("fakegps") || name.contains("gpsplus")
+                    }
+                    for path in injected where !updated.disInjectionFiles.contains(path) {
+                        updated.disInjectionFiles.append(path)
+                    }
+                    options = updated
+                }
+                .disabled(options == nil || !_dylibs.contains { path in
+                    let name = URL(fileURLWithPath: path).lastPathComponent.lowercased()
+                        .filter { $0.isLetter || $0.isNumber }
+                    return name.contains("fakegps") || name.contains("gpsplus")
+                })
+                Text("تُزال المكتبات المحددة ومراجع تحميلها من نسخة العمل عند التوقيع. الملف الأصلي يبقى محفوظًا.")
+                    .font(.footnote)
+                    .foregroundStyle(.secondary)
 				ForEach(_dylibs, id: \.self) { dylib in
 					SigningToggleCellView(
 						title: dylib,

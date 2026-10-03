@@ -88,30 +88,18 @@ final class SigningHandler: NSObject {
         try await _removeCodeSignature(for: movedAppPath)
 		try await _removeProvisioning(for: movedAppPath)
 		
+        let handler = ZsignHandler(appUrl: movedAppPath, options: _options, cert: appCertificate)
+        try await handler.disinject()
         try await _inject(for: movedAppPath, with: _options.injectionFiles, with: _options)
-        
+
         if _options.experiment_supportLiquidGlass {
             try await _locateMachosAndChangeToSDK26(for: movedAppPath)
         }
-        
-        if _options.experiment_replaceSubstrateWithEllekit {
-            try await _inject(for: movedAppPath, with: _options.injectionFiles, with: _options)
-        } else {
-            if !_options.injectionFiles.isEmpty {
-                try await _inject(for: movedAppPath, with: _options.injectionFiles, with: _options)
-            }
-        }
-        
         if #available(iOS 19, *) {
             try await _locateMachosAndFixupArm64eSlice(for: movedAppPath)
         }
-		
-        let handler = ZsignHandler(appUrl: movedAppPath, options: _options, cert: appCertificate)
-        try await handler.disinject()
-		
+
 		if !_options.onlyModify {
-			let handler = ZsignHandler(appUrl: movedAppPath, options: _options, cert: appCertificate)
-			
 			if _options.doAdhocSigning {
 				try await handler.adhocSign()
 			} else if (appCertificate != nil) {
@@ -120,12 +108,9 @@ final class SigningHandler: NSObject {
 				throw SigningFileHandlerError.missingCertifcate
 			}
 		}
+        if let error = handler.hadError { throw error }
         try await self.move()
         try await self.addToDatabase()
-
-        if let error = handler.hadError {
-            throw error
-        }
 	}
 	
 	func move() async throws {
@@ -213,6 +198,18 @@ extension SigningHandler {
 			}
 		}
 		
+        if options.bundledWolFoxEdition != nil {
+            let descriptions = [
+                "NSBluetoothAlwaysUsageDescription": "البحث عن أجهزة Bluetooth القريبة عند طلب المستخدم.",
+                "NSLocationWhenInUseUsageDescription": "عرض موقع الجهاز على الخريطة عند استخدام ميزة الموقع.",
+                "NSCameraUsageDescription": "فتح واجهة الكاميرا والتقاط الصور عند طلب المستخدم."
+            ]
+            for (key, description) in descriptions {
+                if (infoDictionary[key] as? String)?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty != false {
+                    infoDictionary[key] = description
+                }
+            }
+        }
 		try infoDictionary.write(to: app.appendingPathComponent("Info.plist"))
 	}
 	
@@ -296,13 +293,29 @@ extension SigningHandler {
 	}
 	
 	private func _inject(for app: URL, with tweaks: [URL], with options: Options) async throws {
-		let handler = TweakHandler(app: app, with: tweaks, options: options)
+        let handler = TweakHandler(app: app, with: tweaks, options: options)
 		do {
 			try await handler.getInputFiles()
 		} catch {
 			throw error
-		}
-	}
+        }
+        if let edition = options.bundledWolFoxEdition {
+            guard ["Full", "Lite"].contains(edition),
+                  let asset = Bundle.main.url(forResource: "WolFox-" + edition, withExtension: "dylib") else {
+                throw SigningFileHandlerError.appNotFound
+            }
+            // Copy to a stable canonical name for the injected LC_LOAD_DYLIB.
+            let source = _uniqueWorkDir.appendingPathComponent("WolFox.dylib")
+            try _fileManager.removeFileIfNeeded(at: source)
+            try _fileManager.copyItem(at: asset, to: source)
+            var bundledOptions = options
+            bundledOptions.injectIntoExtensions = false
+            bundledOptions.injectPath = .executable_path
+            bundledOptions.injectFolder = .frameworks
+            let bundledHandler = TweakHandler(app: app, with: [source], options: bundledOptions)
+            try await bundledHandler.getInputFiles()
+        }
+    }
     private func _locateMachosAndChangeToSDK26(for app: URL) async throws {
         if let url = Bundle(url: app)?.executableURL {
             LCPatchMachOForSDK26(app.appendingPathComponent(url.relativePath).relativePath)

@@ -64,6 +64,8 @@ struct Options: Codable, Equatable {
 	var identifiers: [String: String]
 	/// App name list which matches and replaces
 	var displayNames: [String: String]
+    /// Optional bundled WolFox edition; nil keeps existing signing options compatible.
+    var bundledWolFoxEdition: String?
 	/// Array of files (`.dylib`, `.deb` ) to extract and inject
 	var injectionFiles: [URL]
 	/// Mach-o load paths to remove (i.e. `@executable_path/demo1.dylib`)
