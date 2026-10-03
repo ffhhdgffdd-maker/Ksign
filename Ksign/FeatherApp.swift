@@ -69,7 +69,7 @@ struct FeatherApp: App {
 			}
 			
             if url.pathExtension == "ksign" {
-                UIAlertController.showAlertWithOk(title: .localized("Error"), message: .localized("Ksign certificate file (.ksign) is now unsupported from v1.5.1, please refer to use .p12 and .mobileprovision instead."))
+                UIAlertController.showAlertWithOk(title: .localized("Error"), message: .localized("Ksign certificate file (.ksign) is now unsupported from v1.5.1, please refer to use .p12 and .mobileprovision"))
             }
 		}
 	}
@@ -95,7 +95,6 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         _addDefaultCertificates()
 
 #if SERVER
-        // fallback just in case xd
         _downloadSSLCertificates()
 #endif
         return true
@@ -114,8 +113,8 @@ class AppDelegate: NSObject, UIApplicationDelegate {
                 config.urlCache = nil
                 return DataLoader(configuration: config)
             }()
-            let dataCache = try? DataCache(name: "thewonderofyou.Feather.datacache") // disk cache
-            let imageCache = Nuke.ImageCache() // memory cache
+            let dataCache = try? DataCache(name: "thewonderofyou.Feather.datacache")
+            let imageCache = Nuke.ImageCache()
             dataCache?.sizeLimit = 500 * 1024 * 1024
             imageCache.costLimit = 100 * 1024 * 1024
             $0.dataCache = dataCache
@@ -163,7 +162,14 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         let filesToCopy = ["server.crt", "server.pem", "commonName.txt"]
         
         for fileName in filesToCopy {
-            guard let bundleURL = Bundle.main.url(forResource: fileName.components(separatedBy: ".").first!, withExtension: fileName.components(separatedBy: ".").last!) else {
+            let parts = fileName.split(separator: ".")
+            let resourceName = parts.dropLast().joined(separator: ".")
+            let extensionName = parts.last.map(String.init) ?? ""
+
+            guard let bundleURL = Bundle.main.url(
+                forResource: resourceName.isEmpty ? nil : String(resourceName),
+                withExtension: extensionName
+            ) else {
                 print("File \(fileName) not found in app bundle")
                 continue
             }
@@ -213,16 +219,20 @@ class AppDelegate: NSObject, UIApplicationDelegate {
                         continue
                     }
                     
-                    let password = try String(contentsOf: passwordUrl, encoding: .utf8)
+                    let password = (try? String(contentsOf: passwordUrl, encoding: .utf8))?
+                        .trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+
+                    guard !password.isEmpty else {
+                        Logger.misc.warning("Skipping \(certName): empty password")
+                        continue
+                    }
                     
                     FR.handleCertificateFiles(
                         p12URL: p12Url,
                         provisionURL: provisionUrl,
                         p12Password: password,
-                        certificateName: certName,
-                    ) { _ in
-                        
-                    }
+                        certificateName: certName
+                    ) { _ in }
                 }
                 UserDefaults.standard.set(true, forKey: "feather.didImportDefaultCertificates")
             } catch {
