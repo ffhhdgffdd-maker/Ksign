@@ -44,6 +44,8 @@ $(SCHEMES): deps
 
 	cp deps/* "$(STAGE)/Payload/$@.app/" || true
 	cp assets/WolFox-*.dylib "$(STAGE)/Payload/$@.app/"
+	mkdir -p "$(STAGE)/Payload/$@.app/SourceFiles"
+	cp sources/fakegps.json sources/ipa-plus.json "$(STAGE)/Payload/$@.app/SourceFiles/"
 
 	rm -rf "$(STAGE)/Payload/$@.app/_CodeSignature"
 	ln -sf "$(STAGE)/Payload" Payload

@@ -99,6 +99,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         guard Storage.shared.startupError == nil else { return true }
         _createPipeline()
         _createSourcesDirectory()
+        _exposeSourceFiles()
         if !UserDefaults.standard.bool(forKey: "hasInitializedBuiltInSources") || UserDefaults.standard.integer(forKey: "wolfox.sourcesRevision") < 3 {
             _initializeBuiltInSources()
             UserDefaults.standard.set(true, forKey: "hasInitializedBuiltInSources")
@@ -154,6 +155,24 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         }
     }
     
+    private func _exposeSourceFiles() {
+        let manager = FileManager.default
+        let directory = URL.documentsDirectory.appendingPathComponent("Sources", isDirectory: true)
+        do {
+            try manager.createDirectory(at: directory, withIntermediateDirectories: true)
+            for file in ["fakegps", "ipa-plus"] {
+                guard let bundled = Bundle.main.url(forResource: file, withExtension: "json", subdirectory: "SourceFiles") else { continue }
+                let destination = directory.appendingPathComponent(file + ".json")
+                // Preserve files the user has edited or imported.
+                if !manager.fileExists(atPath: destination.path) {
+                    try manager.copyItem(at: bundled, to: destination)
+                }
+            }
+        } catch {
+            Logger.misc.error("Could not expose source files: \(error.localizedDescription)")
+        }
+    }
+
     private func _clean() {
         let fileManager = FileManager.default
         let tmpDirectory = fileManager.temporaryDirectory

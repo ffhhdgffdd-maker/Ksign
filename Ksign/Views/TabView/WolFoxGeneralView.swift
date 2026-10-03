@@ -52,6 +52,12 @@ struct WolFoxGeneralView: View {
                             }.buttonStyle(.plain)
                         }
                     }
+                    Text("ملفات المصادر").font(.title2.bold())
+                    NavigationLink {
+                        FilesView(directoryURL: URL.documentsDirectory.appendingPathComponent("Sources", isDirectory: true))
+                    } label: {
+                        Label("عرض وفتح ملفات JSON للمصادر", systemImage: "doc.text")
+                    }
                     Text("الأدوات").font(.title2.bold())
                     NavigationLink { FilesView() } label: { Label("إدارة الملفات", systemImage: "folder") }
                     NavigationLink { DownloaderView() } label: { Label("التنزيلات", systemImage: "arrow.down.circle") }
