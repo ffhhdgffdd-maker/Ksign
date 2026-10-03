@@ -70,9 +70,7 @@ struct LibraryCellView: View {
 					.padding(.trailing, 4)
 				}
 				
-				Image(systemName: "chevron.right")
-					.foregroundColor(.secondary)
-					.font(.footnote)
+				_buttonActions(for: app)
 			}
 		}
 		.scaleEffect(_isSelected ? 0.98 : 1.0)

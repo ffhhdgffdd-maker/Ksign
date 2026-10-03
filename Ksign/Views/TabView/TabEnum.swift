@@ -9,6 +9,7 @@ import SwiftUI
 import NimbleViews
 
 enum TabEnum: String, CaseIterable, Hashable {
+    case home
     case files
 	case sources
 	case library
@@ -18,24 +19,26 @@ enum TabEnum: String, CaseIterable, Hashable {
     case downloader
 	var title: String {
 		switch self {
-        case .files:        return .localized("Files")
-		case .sources:     	return .localized("Sources")
-		case .library: 		return .localized("Library")
-		case .settings: 	return .localized("Settings")
+        case .home: return "الرئيسية"
+        case .files: return "الملفات"
+		case .sources: return "عام"
+		case .library: return "التوقيع"
+		case .settings: return "الإعدادات"
 		case .certificates:	return .localized("Certificates")
-		case .appstore: 	return .localized("App Store")
+		case .appstore: return "التطبيقات"
         case .downloader:   return .localized("Downloads")
 		}
 	}
 	
 	var icon: String {
 		switch self {
-        case .files:        return "folder.fill"
-		case .sources: 		return "globe.desk"
-		case .library: 		return "square.grid.2x2"
+        case .home: return "house.fill"
+        case .files: return "folder.fill"
+		case .sources: 		return "globe"
+		case .library: return "signature"
 		case .settings: 	return "gearshape.2"
 		case .certificates: return "person.text.rectangle"
-		case .appstore: 	return "plus.app.fill"
+		case .appstore: 	return "square.grid.2x2.fill"
         case .downloader:    return "square.and.arrow.down.fill"
 		}
 	}
@@ -43,8 +46,9 @@ enum TabEnum: String, CaseIterable, Hashable {
 	@ViewBuilder
 	static func view(for tab: TabEnum) -> some View {
 		switch tab {
+        case .home: WolFoxHomeView()
         case .files: FilesView()
-		case .sources: SourcesView()
+		case .sources: WolFoxGeneralView()
 		case .library: LibraryView()
 		case .settings: SettingsView()
 		case .certificates: NBNavigationView(.localized("Certificates")) { CertificatesView() }
@@ -54,14 +58,8 @@ enum TabEnum: String, CaseIterable, Hashable {
 	}
 	
 	static var defaultTabs: [TabEnum] {
-		return [
-            .files,
-            .library,
-            .appstore,
-            .downloader,
-			.settings,
-		]
-	}
+        [.home, .appstore, .sources, .library, .settings]
+    }
 	
 	static var customizableTabs: [TabEnum] {
 		return [

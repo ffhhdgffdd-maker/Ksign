@@ -1,136 +1,204 @@
-//
-//  SettingsView.swift
-//  Feather
-//
-//  Created by samara on 10.04.2025.
-//
-
 import SwiftUI
+import CoreData
 import NimbleViews
+import UIKit
 
-// MARK: - View
 struct SettingsView: View {
-    @AppStorage("feather.selectedCert") private var _storedSelectedCert: Int = 0
-    @FetchRequest(
-        entity: CertificatePair.entity(),
-        sortDescriptors: [NSSortDescriptor(keyPath: \CertificatePair.date, ascending: false)],
-        animation: .snappy
-    ) private var _certificates: FetchedResults<CertificatePair>
-    
-    private var selectedCertificate: CertificatePair? {
-        guard
-            _storedSelectedCert >= 0,
-            _storedSelectedCert < _certificates.count
-        else {
-            return nil
-        }
-        return _certificates[_storedSelectedCert]
-    }
-    
-    
-	private let _donationsUrl = "https://github.com/sponsors/nyasami"
-	private let _githubUrl = "https://github.com/nyasami/ksign"
-    private let _discordUrl = "https://discord.gg/sfbZfQzVdQ"
-	// MARK: Body
-    var body: some View {
-		NBNavigationView(.localized("Settings")) {
-			Form {
-//				#if !NIGHTLY && !DEBUG
-				SettingsDonationCellView(site: _donationsUrl)
-//				#endif
-				
-				_feedback()
-				
-				Section {
-                    NavigationLink(destination: AppIconView()) {
-                        Label(.localized("App Icon"), systemImage: "app.badge")
-                    }
-					NavigationLink(destination: AppearanceView()) {
-                        Label(.localized("Appearance"), systemImage: "paintbrush")
-                    }
-				}
-                
-                NBSection(.localized("Certificates")) {
-                    
-                    if let cert = selectedCertificate {
-                        CertificatesCellView(cert: cert)
-                    } else {
-                        Text(.localized("No Certificate"))
-                            .font(.footnote)
-                            .foregroundColor(.disabled())
-                    }
-                    NavigationLink(destination: CertificatesView()) {
-                        Label(.localized("Certificates"), systemImage: "signature")
-                    }
-                 
-                } footer: {
-                    Text(.localized("Add and manage certificates used for signing applications."))
-                }
-				
-				NBSection(.localized("Features")) {
-                    NavigationLink(destination: LogsView(manager: LogsManager.shared)) {
-                        Label(.localized("Logs"), systemImage: "apple.terminal")
-                    }
-					NavigationLink(destination: AppFeaturesView()) {
-                        Label(.localized("App Features"), systemImage: "sparkles")
-                    }
-					NavigationLink(destination: ConfigurationView()) {
-                        Label(.localized("Signing Options"), systemImage: "gear")
-                    }
-					NavigationLink(destination: ArchiveView()) {
-                        Label(.localized("Archive & Extraction"), systemImage: "archivebox")
-                    }
-					NavigationLink(destination: InstallationView()) {
-                        Label(.localized("Installation"), systemImage: "server.rack")
-                    }
-				}
-				
-				_directories()
-                
-                Section {
-                    NavigationLink(destination: ResetView()) {
-                        Label(.localized("Reset"), systemImage: "trash")
-                    }
-                } footer: {
-                    Text("Reset the applications sources, certificates, apps, and general contents.")
-                }
+    @AppStorage("feather.selectedCert") private var selectedCert = 0
+    @FetchRequest(entity: CertificatePair.entity(),
+                  sortDescriptors: [NSSortDescriptor(keyPath: \CertificatePair.date, ascending: false)])
+    private var certificates: FetchedResults<CertificatePair>
 
+    private var certificate: CertificatePair? {
+        certificates.indices.contains(selectedCert) ? certificates[selectedCert] : nil
+    }
+
+    var body: some View {
+        NavigationStack {
+            Form {
+                Section {
+                    NavigationLink { WolFoxDeviceView() } label: {
+                        Label("معلومات الجهاز", systemImage: "iphone")
+                    }
+                    NavigationLink { WolFoxCertificateView(cert: certificate) } label: {
+                        Label("شهادتي", systemImage: "checkmark.seal")
+                    }
+                } footer: {
+                    Text("معلومات جهازك والشهادة المستخدمة في التوقيع.")
+                }
+                Section {
+                    NavigationLink { AppearanceView() } label: {
+                        Label("التفضيلات", systemImage: "slider.horizontal.3")
+                    }
+                    NavigationLink { WolFoxNotificationSettings() } label: {
+                        Label("الإشعارات", systemImage: "bell.badge")
+                    }
+                }
+                Section("ميزات التطبيق") {
+                    NavigationLink { AppFeaturesView() } label: {
+                        Label("ميزات التطبيق", systemImage: "sparkles")
+                    }
+                    NavigationLink { ConfigurationView() } label: {
+                        Label("خيارات التوقيع", systemImage: "signature")
+                    }
+                    NavigationLink { ArchiveView() } label: {
+                        Label("الأرشفة وفك الضغط", systemImage: "archivebox")
+                    }
+                    NavigationLink { InstallationView() } label: {
+                        Label("التثبيت", systemImage: "server.rack")
+                    }
+                    NavigationLink { LogsView(manager: LogsManager.shared) } label: {
+                        Label("السجلات", systemImage: "terminal")
+                    }
+                }
+                Section("روابط المشروع والمصادر") {
+                    Link(destination: URL(string: "https://github.com/ffhhdgffdd-maker/Ksign")!) {
+                        Label("مستودع WolFox", systemImage: "chevron.left.forwardslash.chevron.right")
+                    }
+                    Link(destination: URL(string: "https://fakegps.net/apps")!) {
+                        Label("FakeGPS", systemImage: "globe")
+                    }
+                    Link(destination: URL(string: "https://ipa-plus.com/public/app-gps-plus/")!) {
+                        Label("IPA Plus", systemImage: "globe")
+                    }
+                }
+                Section("إدارة التطبيق") {
+                    NavigationLink { CertificatesView() } label: {
+                        Label("إدارة الشهادات", systemImage: "key")
+                    }
+                    NavigationLink { AppIconView() } label: {
+                        Label("أيقونة التطبيق", systemImage: "app.badge")
+                    }
+                    NavigationLink { SourcesView() } label: {
+                        Label("إدارة المصادر", systemImage: "globe")
+                    }
+                    NavigationLink { ResetView() } label: {
+                        Label("إعادة الضبط", systemImage: "arrow.counterclockwise")
+                    }
+                }
+            }.navigationTitle("الإعدادات")
+        }
+    }
+}
+
+struct WolFoxDeviceView: View {
+    private var modelIdentifier: String {
+        var info = utsname()
+        uname(&info)
+        return withUnsafePointer(to: &info.machine) {
+            $0.withMemoryRebound(to: CChar.self, capacity: 1) { String(cString: $0) }
+        }
+    }
+    var body: some View {
+        Form {
+            Section {
+                VStack(spacing: 14) {
+                    Image(systemName: "iphone").font(.system(size: 64))
+                    Text(UIDevice.current.name).font(.title2.bold())
+                    Text(UIDevice.current.model).foregroundStyle(.secondary)
+                    Text("معلومات الجهاز الحالي").font(.caption).foregroundStyle(.secondary)
+                }.frame(maxWidth: .infinity).padding(.vertical, 28)
+            }.listRowBackground(Color.clear)
+            Section {
+                LabeledContent("اسم الجهاز", value: UIDevice.current.name)
+                LabeledContent("الموديل", value: UIDevice.current.model)
+                LabeledContent("معرّف الموديل", value: modelIdentifier)
+                LabeledContent("إصدار iOS", value: UIDevice.current.systemVersion)
+                LabeledContent("التطبيق", value: "WolFox")
+                LabeledContent("الإصدار", value: Bundle.main.version)
+                LabeledContent("الباندل", value: Bundle.main.bundleIdentifier ?? "")
+            }
+        }.navigationTitle("معلومات الجهاز").navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+struct WolFoxCertificateView: View {
+    let cert: CertificatePair?
+    @State private var showPassword = false
+    @State private var share: WolFoxShareItem?
+    var body: some View {
+        Form {
+            Section {
+                VStack(spacing: 16) {
+                    Image(systemName: "checkmark.seal.fill").font(.system(size: 72))
+                    Text("شهادتي").font(.title.bold())
+                    Text(cert?.nickname ?? "لا توجد شهادة محددة").foregroundStyle(.secondary)
+                }.frame(maxWidth: .infinity).padding(.vertical, 28)
+            }.listRowBackground(Color.clear)
+            if let cert {
+                Section {
+                    fileRow("الشهادة", type: .certificate, cert: cert)
+                    fileRow("ملف البروفايل", type: .provision, cert: cert)
+                    HStack {
+                        Label("كلمة المرور", systemImage: "lock")
+                        Spacer()
+                        Text(showPassword ? (cert.password ?? "") : "••••••")
+                            .textSelection(.enabled)
+                            .environment(\.layoutDirection, .leftToRight)
+                        Button { showPassword.toggle() } label: {
+                            Image(systemName: showPassword ? "eye.slash" : "eye")
+                        }.buttonStyle(.borderless).accessibilityLabel("إظهار أو إخفاء كلمة المرور")
+                    }
+                } footer: { Text("استخدم الشهادة والبروفايل وكلمة المرور للتوقيع.") }
+                Section {
+                    if let expiration = cert.expiration {
+                        LabeledContent("انتهاء الشهادة", value: expiration.formatted(date: .abbreviated, time: .omitted))
+                    }
+                    if cert.revoked { Label("الشهادة ملغاة", systemImage: "xmark.octagon").foregroundStyle(.red) }
+                    NavigationLink { CertificatesInfoView(cert: cert) } label: {
+                        Label("تفاصيل الشهادة", systemImage: "info.circle")
+                    }
+                }
+            }
+            Section {
+                NavigationLink { CertificatesView() } label: { Label("إدارة الشهادات", systemImage: "key") }
+            }
+        }.navigationTitle("شهادتي").navigationBarTitleDisplayMode(.inline)
+            .sheet(item: $share) { WolFoxShareSheet(items: $0.urls) }
+    }
+    private func fileRow(_ title: String, type: Storage.FileRequest, cert: CertificatePair) -> some View {
+        HStack {
+            Label(title, systemImage: type == .certificate ? "key.fill" : "doc.badge.gearshape")
+            Spacer()
+            if let url = Storage.shared.getFile(type, from: cert) {
+                Button { share = WolFoxShareItem(urls: [url]) } label: {
+                    Image(systemName: "square.and.arrow.up")
+                }.buttonStyle(.borderless).accessibilityLabel("مشاركة \(title)")
+            } else {
+                Text("غير متاح").foregroundStyle(.secondary)
             }
         }
     }
 }
 
-// MARK: - View extension
-extension SettingsView {
-	@ViewBuilder
-	private func _feedback() -> some View {
-		Section {
-			NavigationLink(destination: AboutNyaView()) {
-                Label(.localized("About"), systemImage: "info.circle")
+private struct WolFoxShareItem: Identifiable {
+    let id = UUID()
+    let urls: [URL]
+}
+private struct WolFoxShareSheet: UIViewControllerRepresentable {
+    let items: [URL]
+    func makeUIViewController(context: Context) -> UIActivityViewController {
+        UIActivityViewController(activityItems: items, applicationActivities: nil)
+    }
+    func updateUIViewController(_ uiViewController: UIActivityViewController, context: Context) {}
+}
+
+struct WolFoxNotificationSettings: View {
+    var body: some View {
+        Form {
+            Section {
+                Text("تنبيهات اكتمال التنزيل تُدار من ميزات التطبيق.")
+                NavigationLink { AppFeaturesView() } label: {
+                    Label("إعدادات التنبيهات", systemImage: "bell")
+                }
             }
-			Button(.localized("Telegram Channel"), systemImage: "paperplane.circle") {
-				UIApplication.open("https://t.me/KhoinDNS")
-			}
-			Button(.localized("GitHub Repository"), systemImage: "safari") {
-				UIApplication.open(_githubUrl)
-			}
-            Button(.localized("Discord Server"), systemImage: "safari") {
-                UIApplication.open(_discordUrl)
+            Section {
+                Button("إعدادات إشعارات iOS") {
+                    if let url = URL(string: UIApplication.openSettingsURLString) {
+                        UIApplication.shared.open(url)
+                    }
+                }
             }
-		}
-	}
-	
-	@ViewBuilder
-	private func _directories() -> some View {
-		NBSection(.localized("Misc")) {
-			Button(.localized("Open Documents"), systemImage: "folder") {
-				UIApplication.open(URL.documentsDirectory.toSharedDocumentsURL()!)
-			}
-			Button(.localized("Open Archives"), systemImage: "folder") {
-				UIApplication.open(FileManager.default.archives.toSharedDocumentsURL()!)
-			}
-		} footer: {
-			Text(.localized("All of Ksign files except certificates are contained in the documents directory, here are some quick links to these."))
-		}
-	}
+        }.navigationTitle("الإشعارات").navigationBarTitleDisplayMode(.inline)
+    }
 }

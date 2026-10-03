@@ -63,11 +63,15 @@ struct LibraryView: View {
 	
 	// MARK: Body
     var body: some View {
-		NBNavigationView(.localized("Library")) {
+		NBNavigationView("التوقيع") {
 			VStack(spacing: 0) {
+                HStack(spacing: 16) {
+                    _importCard("من رابط", subtitle: "الصق رابط ملف IPA", icon: "link") { _isDownloadingPresenting = true }
+                    _importCard("من ملف", subtitle: "اختر ملف IPA من الجهاز", icon: "folder") { _isImportingPresenting = true }
+                }.padding(.horizontal).padding(.top, 12)
 				Picker("", selection: $_selectedTab) {
-					Text(.localized("Downloaded Apps")).tag(0)
-					Text(.localized("Signed Apps")).tag(1)
+					Text("جاهز للتوقيع").tag(0)
+					Text("الموقّعة").tag(1)
 				}
 				.pickerStyle(SegmentedPickerStyle())
 				.padding(.horizontal)
@@ -76,7 +80,7 @@ struct LibraryView: View {
 				NBListAdaptable {
 					if _selectedTab == 0 {
 						NBSection(
-							.localized("Downloaded Apps"),
+							"جاهز للتوقيع",
 							secondary: _filteredImportedApps.count.description
 						) {
 							ForEach(_filteredImportedApps, id: \.uuid) { app in
@@ -93,7 +97,7 @@ struct LibraryView: View {
 						}
 					} else {
 						NBSection(
-							.localized("Signed Apps"),
+							"الموقّعة",
 							secondary: _filteredSignedApps.count.description
 						) {
 							ForEach(_filteredSignedApps, id: \.uuid) { app in
@@ -112,26 +116,7 @@ struct LibraryView: View {
 				}
 			}
 			.searchable(text: $_searchText, placement: .platform())
-            .overlay {
-                if
-                    _filteredSignedApps.isEmpty,
-                    _filteredImportedApps.isEmpty
-                {
-                    if #available(iOS 17, *) {
-                        ContentUnavailableView {
-                            Label(.localized("No Apps"), systemImage: "questionmark.app.fill")
-                        } description: {
-                            Text(.localized("Get started by importing your first IPA file."))
-                        } actions: {
-                            Menu {
-                                _importActions()
-                            } label: {
-                                Text("Import").bg()
-                            }
-                        }
-                    }
-                }
-            }
+
 			.toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     EditButton()
@@ -253,6 +238,17 @@ struct LibraryView: View {
 }
 
 extension LibraryView {
+    private func _importCard(_ title: String, subtitle: String, icon: String, action: @escaping () -> Void) -> some View {
+        Button(action: action) {
+            VStack(alignment: .leading, spacing: 10) {
+                Image(systemName: icon).font(.title)
+                Text(title).font(.title3.bold())
+                Text(subtitle).font(.caption).foregroundStyle(.secondary)
+            }.frame(maxWidth: .infinity, minHeight: 108, alignment: .leading)
+                .padding(18)
+                .background(Color(uiColor: .secondarySystemBackground), in: RoundedRectangle(cornerRadius: 24))
+        }.buttonStyle(.plain)
+    }
     @ViewBuilder
     private func _importActions() -> some View {
         Button(.localized("Import from Files"), systemImage: "folder") {
