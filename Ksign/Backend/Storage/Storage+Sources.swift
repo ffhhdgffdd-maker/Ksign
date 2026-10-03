@@ -92,19 +92,33 @@ extension Storage {
 	}
 
 
-	func addBuiltInSources() {
-		let builtInSourceURLs = [
-            "https://raw.githubusercontent.com/ffhhdgffdd-maker/Ksign/ceresify-security-build/sources/fakegps.json",
+    func addBuiltInSources() {
+        let retiredURLs = Set([
             "https://raw.githubusercontent.com/Nyasami/Ksign/refs/heads/main/repo.json",
             "https://community-apps.sidestore.io/sidecommunity.json",
             "https://github.com/LiveContainer/LiveContainer/releases/download/1.0/apps.json",
             "https://alt.crystall1ne.dev"
-		]
-		
-		for urlString in builtInSourceURLs {
-			FR.handleSource(urlString) { }
-		}
-	}
+        ])
+        for source in getSources() {
+            if let url = source.sourceURL?.absoluteString, retiredURLs.contains(url) {
+                context.delete(source)
+            }
+        }
+        let sources = [
+            ("fakegps", "WolFox — Fake GPS", "com.wolfox.source.fakegps"),
+            ("ipa-plus", "WolFox — IPA Plus", "com.wolfox.source.ipaplus")
+        ]
+        for (file, name, identifier) in sources {
+            guard let url = URL(string: "https://raw.githubusercontent.com/ffhhdgffdd-maker/Ksign/ceresify-security-build/sources/" + file + ".json") else { continue }
+            addSource(url, name: name, identifier: identifier, deferSave: true, isBuiltIn: true) { _ in }
+        }
+        do {
+            try context.save()
+            UserDefaults.standard.set(2, forKey: "wolfox.sourcesRevision")
+        } catch {
+            print("Could not save WolFox sources: " + error.localizedDescription)
+        }
+    }
 
 	func deleteSource(for source: AltSource) {
 		context.delete(source)

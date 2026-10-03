@@ -26,7 +26,7 @@ final class ZsignHandler {
 	}
 	
 	func disinject() async throws {
-		guard !_options.disInjectionFiles.isEmpty else {
+		guard !_options.disInjectionFiles.isEmpty || _options.removeInjectedGPSLibraries == true else {
 			return
 		}
 		
@@ -46,11 +46,12 @@ final class ZsignHandler {
             URL(fileURLWithPath: path).deletingPathExtension().lastPathComponent
                 .lowercased().filter { $0.isLetter || $0.isNumber }
         }
-        let selected = Set(_options.disInjectionFiles.filter {
+        var selected = Set(_options.disInjectionFiles.filter {
             let name = normalized($0)
             return name.contains("fakegps") || name.contains("gpsplus")
         }.map { normalized($0) })
-        guard !selected.isEmpty else { return }
+        let removeAllGPS = _options.removeInjectedGPSLibraries == true
+        guard !selected.isEmpty || removeAllGPS else { return }
 
         let root = _appUrl.standardizedFileURL.resolvingSymlinksInPath()
         let manager = FileManager.default
@@ -78,13 +79,28 @@ final class ZsignHandler {
                 executables.insert(executable)
             }
             if ext == "dylib" { executables.insert(file) }
-            if ["dylib", "framework"].contains(ext), selected.contains(normalized(file.path)) {
+            let name = normalized(file.path)
+            let namedGPS = name.contains("fakegps") || name.contains("gpsplus")
+            if ["dylib", "framework", "bundle", "plist"].contains(ext),
+               selected.contains(name) || (removeAllGPS && namedGPS) {
                 libraries.insert(file)
+                if ext == "dylib" || ext == "framework" { selected.insert(name) }
             }
         }
         // Remove matching load commands from every executable before deleting any library.
         for executable in executables {
+            let resolved = executable.standardizedFileURL.resolvingSymlinksInPath()
+            guard resolved.path.hasPrefix(root.path + "/"),
+                  manager.fileExists(atPath: resolved.path) else {
+                throw SigningFileHandlerError.disinjectFailed
+            }
             let paths = Zsign.listDylibs(appExecutable: executable.path).map { $0 as String }
+            if removeAllGPS {
+                for path in paths {
+                    let name = normalized(path)
+                    if name.contains("fakegps") || name.contains("gpsplus") { selected.insert(name) }
+                }
+            }
             let removals = paths.filter { selected.contains(normalized($0)) }
             guard removals.isEmpty || Zsign.removeDylibs(appExecutable: executable.path, using: removals) else {
                 throw SigningFileHandlerError.disinjectFailed

@@ -20,24 +20,15 @@ struct SigningDylibView: View {
 	var body: some View {
 		NBList(.localized("Dylibs"), type: .list) {
 			Section {
-                Button("إزالة FakeGps وGpsPlus المحقونة", systemImage: "trash") {
-                    guard var updated = options else { return }
-                    let injected = _dylibs.filter { path in
-                        let name = URL(fileURLWithPath: path).lastPathComponent.lowercased()
-                            .filter { $0.isLetter || $0.isNumber }
-                        return name.contains("fakegps") || name.contains("gpsplus")
+                Toggle("إزالة FakeGps وGpsPlus المحقونة", isOn: Binding(
+                    get: { options?.removeInjectedGPSLibraries ?? false },
+                    set: { enabled in
+                        guard var updated = options else { return }
+                        updated.removeInjectedGPSLibraries = enabled
+                        options = updated
                     }
-                    for path in injected where !updated.disInjectionFiles.contains(path) {
-                        updated.disInjectionFiles.append(path)
-                    }
-                    options = updated
-                }
-                .disabled(options == nil || !_dylibs.contains { path in
-                    let name = URL(fileURLWithPath: path).lastPathComponent.lowercased()
-                        .filter { $0.isLetter || $0.isNumber }
-                    return name.contains("fakegps") || name.contains("gpsplus")
-                })
-                Text("تُزال المكتبات المحددة ومراجع تحميلها من نسخة العمل عند التوقيع. الملف الأصلي يبقى محفوظًا.")
+                ))
+                Text("يشمل الفحص التطبيق وإضافاته ومكتباته وموارد FakeGps وGpsPlus. تُزال من نسخة العمل قبل الحقن والتوقيع.")
                     .font(.footnote)
                     .foregroundStyle(.secondary)
 				ForEach(_dylibs, id: \.self) { dylib in

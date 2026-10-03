@@ -1,7 +1,13 @@
-name: Build Ceresify Security IPA
+name: Build WolFox IPA
 on:
   push:
     branches: [ceresify-security-build]
+    paths:
+      - "Ksign/**"
+      - "Ksign.xcodeproj/**"
+      - "assets/**"
+      - "makefile"
+      - ".github/workflows/build-security-ipa.yml"
   workflow_dispatch:
 permissions:
   contents: read
@@ -14,20 +20,26 @@ jobs:
         with:
           submodules: recursive
       - name: Build unsigned IPA
-        run: make
+        run: |
+          make
+          mv packages/Ksign.ipa packages/WolFox.ipa
       - name: Validate IPA
         run: |
-          test -s packages/Ksign.ipa
-          unzip -tq packages/Ksign.ipa
-          unzip -q packages/Ksign.ipa -d ipa-check
+          test -s packages/WolFox.ipa
+          unzip -tq packages/WolFox.ipa
+          unzip -q packages/WolFox.ipa -d ipa-check
           test "$(/usr/libexec/PlistBuddy -c 'Print :CFBundleIdentifier' ipa-check/Payload/Ksign.app/Info.plist)" = com.wolfox.ksign
           test "$(/usr/libexec/PlistBuddy -c 'Print :CFBundleDisplayName' ipa-check/Payload/Ksign.app/Info.plist)" = WolFox
-          shasum -a 256 packages/Ksign.ipa > packages/Ksign.ipa.sha256
+          test -s ipa-check/Payload/Ksign.app/WolFox-Full.dylib
+          test -s ipa-check/Payload/Ksign.app/WolFox-Lite.dylib
+          echo "19299ba9d7722bf795ea4c64e5960b457a57f7f51ba5c3977a4a73ce47a3de8f  ipa-check/Payload/Ksign.app/WolFox-Full.dylib" | shasum -a 256 -c
+          echo "d7d9d97a13b5cb784af3ade76506906a99203d1261094cf631b1739ecd8c9eb1  ipa-check/Payload/Ksign.app/WolFox-Lite.dylib" | shasum -a 256 -c
+          shasum -a 256 packages/WolFox.ipa > packages/WolFox.ipa.sha256
       - uses: actions/upload-artifact@v4
         with:
-          name: Ceresify-security-IPA
+          name: WolFox-IPA
           path: |
-            packages/Ksign.ipa
-            packages/Ksign.ipa.sha256
+            packages/WolFox.ipa
+            packages/WolFox.ipa.sha256
           if-no-files-found: error
           retention-days: 14

@@ -1,0 +1,40 @@
+name: Refresh IPA Plus source
+on:
+  workflow_dispatch:
+  push:
+    branches: [ceresify-security-build]
+    paths:
+      - "tools/collect_ipa_plus.py"
+      - ".github/workflows/refresh-app-sources.yml"
+      - "sources/ipa-plus-catalog.json"
+permissions:
+  contents: write
+concurrency:
+  group: ipa-plus-source
+  cancel-in-progress: false
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@v4
+      - name: Read real IPA metadata sequentially
+        run: python3 tools/collect_ipa_plus.py
+      - name: Preserve source reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: IPA-Plus-source-reports
+          path: |
+            sources/ipa-plus.json
+            sources/ipa-plus-verified.json
+          if-no-files-found: warn
+      - name: Save verified source
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add sources/ipa-plus.json sources/ipa-plus-verified.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Refresh verified IPA Plus source metadata"
+          git pull --rebase origin ceresify-security-build
+          git push origin HEAD:ceresify-security-build

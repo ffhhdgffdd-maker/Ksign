@@ -1,0 +1,93 @@
+{
+  "name": "WolFox — IPA Plus",
+  "identifier": "com.wolfox.source.ipaplus",
+  "website": "https://ipa-plus.com/public/app-gps-plus/",
+  "tintColor": "1677FF",
+  "apps": [
+    {
+      "name": "جمعية الشاطبي التعليمية - رافد",
+      "bundleIdentifier": "com.rafed.shatiby.panel",
+      "developerName": "IPA Plus",
+      "iconURL": "https://ipa-plus.com/public/app-gps-plus/icons/1785327351_8e399d.png",
+      "localizedDescription": "نسخة مقدمة من IPA Plus. الباندل والإصدار مقروءان من ملف IPA.",
+      "versions": [
+        {
+          "version": "1.0.1",
+          "buildVersion": "2",
+          "date": "2026-10-03T04:09:42.000574+00:00",
+          "downloadURL": "https://ipa-plus.com/public/app-gps-plus/download.php?id=495bf2af1e",
+          "size": 3001450,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "Truein User",
+      "bundleIdentifier": "com.gotruein.one",
+      "developerName": "IPA Plus",
+      "iconURL": "https://ipa-plus.com/public/app-gps-plus/icons/1785326963_78b8cf.png",
+      "localizedDescription": "نسخة مقدمة من IPA Plus. الباندل والإصدار مقروءان من ملف IPA.",
+      "versions": [
+        {
+          "version": "6.3.9",
+          "buildVersion": "10569",
+          "date": "2026-10-03T04:11:08.726209+00:00",
+          "downloadURL": "https://ipa-plus.com/public/app-gps-plus/download.php?id=truein-user",
+          "size": 48556411,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "Malachite",
+      "bundleIdentifier": "com.creadev.malachite",
+      "developerName": "IPA Plus",
+      "iconURL": "https://ipa-plus.com/public/app-gps-plus/icons/1785326812_a2b53f.png",
+      "localizedDescription": "نسخة مقدمة من IPA Plus. الباندل والإصدار مقروءان من ملف IPA.",
+      "versions": [
+        {
+          "version": "6.0.1",
+          "buildVersion": "6131",
+          "date": "2026-10-03T04:11:51.975233+00:00",
+          "downloadURL": "https://ipa-plus.com/public/app-gps-plus/download.php?id=malachite",
+          "size": 70129860,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "Employee Switch",
+      "bundleIdentifier": "sa.gov.ncw.employeeswitch",
+      "developerName": "IPA Plus",
+      "iconURL": "https://ipa-plus.com/public/app-gps-plus/icons/1785326929_9ed7ba.png",
+      "localizedDescription": "نسخة مقدمة من IPA Plus. الباندل والإصدار مقروءان من ملف IPA.",
+      "versions": [
+        {
+          "version": "1.0.3",
+          "buildVersion": "1.0.3",
+          "date": "2026-10-03T04:12:28.701591+00:00",
+          "downloadURL": "https://ipa-plus.com/public/app-gps-plus/download.php?id=employee-switch",
+          "size": 55740484,
+          "minOSVersion": "10.0"
+        }
+      ]
+    },
+    {
+      "name": "Bayzat",
+      "bundleIdentifier": "com.bayzat.benefits",
+      "developerName": "IPA Plus",
+      "iconURL": "https://ipa-plus.com/public/app-gps-plus/icons/1789958352_a1a548.png",
+      "localizedDescription": "نسخة مقدمة من IPA Plus. الباندل والإصدار مقروءان من ملف IPA.",
+      "versions": [
+        {
+          "version": "17.5.1",
+          "buildVersion": "8396",
+          "date": "2026-10-03T04:13:16.224159+00:00",
+          "downloadURL": "https://ipa-plus.com/public/app-gps-plus/download.php?id=bayzat",
+          "size": 80429075,
+          "minOSVersion": "15.0"
+        }
+      ]
+    }
+  ]
+}

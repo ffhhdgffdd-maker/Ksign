@@ -66,6 +66,8 @@ struct Options: Codable, Equatable {
 	var displayNames: [String: String]
     /// Optional bundled WolFox edition; nil keeps existing signing options compatible.
     var bundledWolFoxEdition: String?
+    /// Remove named GPS injections throughout the working copy, including app extensions.
+    var removeInjectedGPSLibraries: Bool?
 	/// Array of files (`.dylib`, `.deb` ) to extract and inject
 	var injectionFiles: [URL]
 	/// Mach-o load paths to remove (i.e. `@executable_path/demo1.dylib`)

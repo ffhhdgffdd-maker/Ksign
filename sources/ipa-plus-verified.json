@@ -1,0 +1,75 @@
+[
+  {
+    "name": "جمعية الشاطبي التعليمية - رافد",
+    "bundle": "com.rafed.shatiby.panel",
+    "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785327351_8e399d.png",
+    "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=495bf2af1e",
+    "bundleIdentifier": "com.rafed.shatiby.panel",
+    "version": "1.0.1",
+    "buildVersion": "2",
+    "minOSVersion": "10.0",
+    "sizeBytes": 3001450,
+    "date": "2026-10-03T04:09:42.000574+00:00",
+    "verified": true
+  },
+  {
+    "name": "Darwinbox",
+    "bundle": "com.darwinbox.darwinboxswift",
+    "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785327416_d3c6f6.png",
+    "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=darwinbox",
+    "verified": false,
+    "error": "Command '['curl', '--fail', '--location', '--silent', '--show-error', '--max-time', '55', '--max-filesize', '400000000', 'https://ipa-plus.com/public/app-gps-plus/download.php?id=darwinbox', '-o', '/tmp/tmpn5eedkya/app.ipa']' returned non-zero exit s"
+  },
+  {
+    "name": "Truein User",
+    "bundle": "com.gotruein.one",
+    "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785326963_78b8cf.png",
+    "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=truein-user",
+    "bundleIdentifier": "com.gotruein.one",
+    "version": "6.3.9",
+    "buildVersion": "10569",
+    "minOSVersion": "10.0",
+    "sizeBytes": 48556411,
+    "date": "2026-10-03T04:11:08.726209+00:00",
+    "verified": true
+  },
+  {
+    "name": "Malachite",
+    "bundle": "com.creadev.malachite",
+    "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785326812_a2b53f.png",
+    "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=malachite",
+    "bundleIdentifier": "com.creadev.malachite",
+    "version": "6.0.1",
+    "buildVersion": "6131",
+    "minOSVersion": "10.0",
+    "sizeBytes": 70129860,
+    "date": "2026-10-03T04:11:51.975233+00:00",
+    "verified": true
+  },
+  {
+    "name": "Employee Switch",
+    "bundle": "sa.gov.ncw.employeeswitch",
+    "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1785326929_9ed7ba.png",
+    "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=employee-switch",
+    "bundleIdentifier": "sa.gov.ncw.employeeswitch",
+    "version": "1.0.3",
+    "buildVersion": "1.0.3",
+    "minOSVersion": "10.0",
+    "sizeBytes": 55740484,
+    "date": "2026-10-03T04:12:28.701591+00:00",
+    "verified": true
+  },
+  {
+    "name": "Bayzat",
+    "bundle": "com.bayzat.benefits",
+    "icon": "https://ipa-plus.com/public/app-gps-plus/icons/1789958352_a1a548.png",
+    "download": "https://ipa-plus.com/public/app-gps-plus/download.php?id=bayzat",
+    "bundleIdentifier": "com.bayzat.benefits",
+    "version": "17.5.1",
+    "buildVersion": "8396",
+    "minOSVersion": "15.0",
+    "sizeBytes": 80429075,
+    "date": "2026-10-03T04:13:16.224159+00:00",
+    "verified": true
+  }
+]
